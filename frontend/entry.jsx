@@ -4,7 +4,9 @@ import Root from './components/root';
 import configureStore from './store/store'
 
 //testing
-import {login, signup, logout} from './util/session_api_util';
+// import {login, signup, logout} from './util/session_api_util';
+
+import {login, signup, logout} from './actions/session_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -20,3 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ReactDOM.render(<Root store={store} />, root);
 });
+
+// const userlogin = { email:"phil@dafd.com", password: 123456}
