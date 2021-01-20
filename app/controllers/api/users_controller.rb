@@ -7,7 +7,6 @@ class Api::UsersController < ApplicationController
     if @user.save
       login(@user)
       # render "api/users/show"
-      # console.log(@user)
     else
       render json: @user.errors.full_messages, status: 422
     end
@@ -15,7 +14,13 @@ class Api::UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: "api/users/index"
+    render :index 
+    # to be more explicit, can be excluded and by default will look for index filename
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render :show
   end
 
   private
