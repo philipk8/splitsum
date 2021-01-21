@@ -8,20 +8,24 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import GreetingContainer from './greeting/greeting_container';
+import SplashContainer from './splash/splash_container';
 import LogInFormContainer from './session_form/login_form_container'
 import SignUpFormContainer from './session_form/signup_form_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import SplashPage from './splash/splash_page'
+
 const App = () => (
   <div>
-    <header>
-      <h1>Welcome to Splitsum!</h1>
-      <GreetingContainer />
-    </header>
+       
+      {/* <SplashContainer /> */}
+
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+      <AuthRoute exact path="/" component={SplashPage} />
+      {/* <ProtectedRoute exact path="/dashboard" component={DashBoardContainer} /> */}
+      
     </Switch>
   </div>
 );

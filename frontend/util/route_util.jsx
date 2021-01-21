@@ -11,6 +11,7 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
     )
   )} />
 );
+// already logged in; so don't want to show signup and login form
 
 const Protected = ({ component: Component, path, loggedIn, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
@@ -21,6 +22,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
     )
   )} />
 );
+// dont want to let non-logged in users see the content / 'chirps'
 
 const msp = state => (
   {loggedIn: Boolean(state.session.id)}
