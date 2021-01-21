@@ -1,0 +1,25 @@
+.main-section {
+  border: 1px solid grey;
+  height: 600px;
+  background: url('background_2.png');
+}
+
+.section-content {
+  height: 600px;
+  max-width: 1218px;
+  margin: auto;
+  display: flex;
+  border: 1px solid blue;
+}
+
+.left-section {
+  border: 1px solid red;
+  width: 512px;
+  height: 600px;
+}
+
+.right-section {
+  border: 1px solid green;
+  width: 706px;
+  height: 600px;
+}

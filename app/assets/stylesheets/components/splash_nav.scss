@@ -1,0 +1,84 @@
+.main-page {
+  // display: flex;
+  // justify-content: space-between;
+  // max-width: 1218px;
+  // margin: auto;
+  // left: 50%;
+  // text-align: center;
+}
+
+.splash-nav {
+  max-width: 1218px;
+  margin: auto;
+  // margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  // border: 1px solid grey;
+}
+
+.left-nav{
+  display: flex;
+  align-items: center;
+  // padding: 0 0 0 10px;
+  // margin: 10px;
+  // border: 1px solid grey;
+}
+
+.right-nav{
+  display: flex;
+  align-items: center;
+  // padding: 0 0 0 10px;
+  // margin: 10px;
+  // border: 1px solid grey;
+}
+
+.logo {
+  width: 50px;
+  text-decoration: none;
+  // margin-top: 10px;
+  // border: 1px solid grey;
+}
+
+.word-logo {
+  font-family: Montserrat;
+  font-weight: 650;
+  text-decoration: none;
+  font-size: 18px;
+  color: #373B3F;
+  margin: 8px;
+  margin-top: 15px;
+  // border: 1px solid grey;
+}
+
+.login-link {
+  font-family: Montserrat;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  color:#1CC29F;
+  margin-right: 12px;
+  // border: 1px solid grey;
+}
+
+ .signup-button {
+   cursor: pointer;
+   height: 46px;
+   width: 95px;
+   background-color: #1CC29F;
+   font-family: Montserrat;
+   font-weight: 600;
+   font-size: 14px;
+   color: white;
+   border: 0px;
+   border-radius: 8px;
+   box-shadow: 0 4px 2px -2px gray
+  //  padding: 8px 12px;
+ }
+
+ .signup-button:hover {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+ }
