@@ -8,7 +8,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import SplashContainer from './splash/splash_container';
+import DashBoardContainer from './dashboard/dashboard_container';
 import LogInFormContainer from './session_form/login_form_container'
 import SignUpFormContainer from './session_form/signup_form_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -24,7 +24,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <AuthRoute exact path="/" component={SplashPage} />
-      {/* <ProtectedRoute exact path="/dashboard" component={DashBoardContainer} /> */}
+      <ProtectedRoute exact path="/dashboard" component={DashBoardContainer} />
       
     </Switch>
   </div>

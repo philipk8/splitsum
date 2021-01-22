@@ -1,0 +1,93 @@
+.session-nav {
+  background-color: #5bc5a7
+}
+
+.session-nav-elements {
+  max-width: 941px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  // margin-bottom: 9px;
+  // background-color: #5bc5a7
+}
+
+.left-session-nav{
+  display: flex;
+  // align-items: baseline;
+}
+
+.right-session-nav{
+  display: flex;
+  align-items: center;
+  font-family: Lato;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  // text-shadow: 1px 1px
+}
+
+.session-logo {
+  max-width: 24px;
+  text-decoration: none;
+}
+
+.session-word-logo {
+  font-family: Montserrat;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  margin-left: 8px;
+  // margin-top: 15px;
+  // border: 1px solid grey;
+  position: relative;
+  top: 7px;
+}
+
+ .session-login-button {
+   cursor: pointer;
+   height: 27px;
+   width: 60px;
+   background-color:  #5bc5a7;
+   font-family: Lato;
+   font-weight: 400;
+   font-size: 13px;
+   color: white;
+   border: 2px;
+   border-radius: 5px;
+  //  box-shadow: 0 4px 2px -2px gray
+  // box-shadow:  inset 2px 2px 3px grey ;
+  //  padding: 8px 12px;
+  box-shadow:  0px 2px 5px rgba(0,0,0,.3);
+  margin-right: 3px; 
+ }
+
+ .session-login-button:hover {
+  background-color: #1CC29F;
+ }
+
+  .session-signup-button {
+   cursor: pointer;
+   height: 27px;
+   width: 71px;
+   background-color:  #FF652F;
+   font-family: Lato;
+   font-weight: 400;
+   font-size: 13px;
+   color: white;
+   border: 2px;
+   border-radius: 5px;
+  //  box-shadow: 0 4px 2px -2px gray
+  // box-shadow:  inset 2px 2px 3px grey ;
+  //  padding: 8px 12px;
+  box-shadow:  0px 2px 5px rgba(0,0,0,.3);
+  margin-left: 3px; 
+ }
+
+ .session-signup-button:hover {
+  background-color: #f84808;
+ }
+
+
