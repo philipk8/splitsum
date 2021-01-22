@@ -47,7 +47,8 @@ class SessionForm extends React.Component {
         <header className='session-nav'>
           <nav className='session-nav-elements'>
             <nav className='left-session-nav'>
-              <img className='session-logo' src="assets/splitsum-logo.png" alt=""/>
+              {/* <img className='session-logo' src="assets/splitsum_logo.png" alt=""/> */}
+              <img className='session-logo' src={window.splitsum_logo} alt=""/>
               <Link to="/" className='session-word-logo'>Splitsum</Link>
             </nav>
             <nav className='right-session-nav'>
@@ -68,7 +69,8 @@ class SessionForm extends React.Component {
 
         <section className='session-section'>
             <section className='session-left'>
-                <img className='session-section-logo'src="assets/splitsum-logo.png" alt=""/>
+                {/* <img className='session-section-logo'src="assets/splitsum_logo.png" alt=""/> */}
+                <img className='session-section-logo'src={window.splitsum_logo} alt=""/>
             </section>
 
             <section className='session-right'>

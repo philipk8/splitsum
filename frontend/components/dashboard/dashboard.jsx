@@ -14,7 +14,8 @@ class Dashboard extends React.Component {
         <header className='db-header'>
           <nav className='db-nav-elements'>
             <nav className='db-left-nav'>
-              <img className='db-logo' src="assets/splitsum-logo.png" alt=""/>
+              {/* <img className='db-logo' src="assets/splitsum_logo.png" alt=""/> */}
+              <img className='db-logo' src={window.splitsum_logo} alt=""/>
               <Link to="/" className='db-word-logo'>Splitsum</Link>
             </nav>
             <nav className='db-right-nav'>

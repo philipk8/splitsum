@@ -7,7 +7,8 @@ const SplashPage = () => (
    <header className='splash-nav'>
    
     <nav className='left-nav'>
-      <img className='logo' src="assets/splitsum-logo.png" alt=""/>
+      {/* <img className='logo' src="assets/splitsum_logo.png" alt=""/> */}
+      <img className='logo' src={window.splitsum_logo} alt=""/>
       <Link to="/" className='word-logo'>Splitsum</Link>
     </nav>
     
@@ -34,10 +35,14 @@ const SplashPage = () => (
           </p>
           
           <div className='section-icons'>
-            <img src="assets/airplane-icon.png" alt=""/>
-            <img src="assets/house-icon.png" alt=""/>
-            <img src="assets/heart-icon.png" alt=""/>
-            <img src="assets/star-icon.png" alt=""/>
+            {/* <img src="assets/airplane_icon.png" alt=""/>
+            <img src="assets/house_icon.png" alt=""/>
+            <img src="assets/heart_icon.png" alt=""/>
+            <img src="assets/star_icon.png" alt=""/> */}
+            <img src={window.airplane_icon} alt=""/>
+            <img src={window.house_icon} alt=""/>
+            <img src={window.heart_icon} alt=""/>
+            <img src={window.star_icon} alt=""/>
           </div>
           
           <p className='section-text'>Keep track of your shared expenses and balances with housemates, trips, groups, friends, and family.   
@@ -57,7 +62,7 @@ const SplashPage = () => (
         </section>
 
         <section className='right-section'>
-            <img className='airplane'src="assets/airplane-icon.png" alt=""/>
+            <img className='airplane'src="assets/airplane_icon.png" alt=""/>
         </section>
       </section>
     </section>
