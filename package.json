@@ -34,13 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philipk8/Splitsum.git"
+    "url": "git+https://github.com/philipk8/splitsum.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/philipk8/Splitsum/issues"
+    "url": "https://github.com/philipk8/splitsum/issues"
   },
-  "homepage": "https://github.com/philipk8/Splitsum#readme"
+  "homepage": "https://github.com/philipk8/splitsum#readme"
 }
