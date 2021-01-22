@@ -7,7 +7,7 @@ const SplashPage = () => (
    <header className='splash-nav'>
    
     <nav className='left-nav'>
-      <img className='logo' src="assets/splitsum_logo.png" alt=""/>
+      <img className='logo' src="assets/splitsum-logo.png" alt=""/>
       <Link to="/" className='word-logo'>Splitsum</Link>
     </nav>
     
