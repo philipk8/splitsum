@@ -1,5 +1,7 @@
+@import "base/colors.scss";
+
 .session-nav {
-  background-color: #5bc5a7
+  background-color: $light-green
 }
 
 .session-nav-elements {
@@ -9,8 +11,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-  // margin-bottom: 9px;
-  // background-color: #5bc5a7
 }
 
 .left-session-nav{
@@ -50,7 +50,7 @@
    cursor: pointer;
    height: 27px;
    width: 60px;
-   background-color:  #5bc5a7;
+   background-color:  $light-green;
    font-family: Lato;
    font-weight: 400;
    font-size: 13px;
@@ -65,7 +65,7 @@
  }
 
  .session-login-button:hover {
-  background-color: #1CC29F;
+  background-color: $main-green;
  }
 
   .session-signup-button {

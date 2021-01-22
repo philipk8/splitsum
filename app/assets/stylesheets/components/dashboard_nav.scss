@@ -1,5 +1,7 @@
+@import "base/colors.scss";
+
 .db-header {
-  background-color: #5bc5a7
+  background-color: $light-green
 }
 
 .db-nav-elements {
@@ -9,8 +11,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  // margin-bottom: 9px;
-  // background-color: #5bc5a7
 }
 
 .db-left-nav{

@@ -1,0 +1,125 @@
+@import "base/colors.scss";
+
+.signup-section {
+  max-width: 941px;
+  margin: auto;
+  display: flex;
+  // border: 1px solid blue;
+  margin-top: 80px;
+}
+
+.signup-left {
+  // border: 1px solid blue;
+  width: 470px;
+  display: flex;
+  justify-content: flex-end;
+  // flex-direction: column;
+  // padding: 60px;
+  align-items: flex-start;
+}
+
+.signup-section-logo {
+  margin-right: 3px;
+  padding-top: 10px;
+  width: 230px;
+}
+
+.signup-right {
+  // border: 1px solid red;
+  width: 470px;
+  // height: 600px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 3px;
+}
+
+.signup-welcome {
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 16px;
+  color: #999999;
+  font-weight: 550;
+}
+
+.signup-submit {
+   cursor: pointer;
+   height: 56px;
+   width: 155px;
+   background-color:  #FF652F;
+   font-family: Lato;
+   font-weight: 400;
+   font-size: 23px;
+   color: white;
+   border: 2px;
+   border-radius: 5px;
+  //  box-shadow: 0 4px 2px -2px gray
+  // box-shadow:  inset 2px 2px 3px grey ;
+  //  padding: 8px 12px;
+  box-shadow:  0px 2px 5px rgba(0,0,0,.3);
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+ }
+
+ .session-submit:hover {
+  background-color: #f84808;
+ }
+
+ .show-input {
+  margin-top: 8px;
+  margin-bottom: 17px;
+  border-color: 0.5px solid lightgrey ;
+  width: 319px;
+  height: 35px;
+  margin-bottom: 25px; 
+}
+.dont-show-input, .dont-show-error {
+  visibility: hidden;
+}
+
+.signup-hithere {
+  font-family: Lato;
+  font-size: 24px;
+  color: #333333;
+}
+
+.signup-name {
+  margin-top: 8px;
+  margin-bottom: 27px;
+  border-color: 0.5px solid lightgrey ;
+  width: 319px;
+  height: 51px;
+}
+
+span.show-input {
+  color: #333333;
+  font-size: 18px;
+  font-family: Lato;
+}
+// #font-bold.show-input {
+//   color: #333333;
+//   font-size: 18px;
+//   font-family: Lato;
+//   font-weight: 600;
+// }
+#font-bold {
+  // color: #333333;
+  // font-size: 18px;
+  // font-family: Lato;
+  font-weight: 600;
+}
+
+.show-error {
+  margin-top: 12px;
+  background:#cc4455;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Lato;
+}
+
+#errors-list {
+  padding-top: 5px;
+  padding-left: 15px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class LogInForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,6 +23,10 @@ class SessionForm extends React.Component {
     this.props.processForm(user).then(() => this.props.history.push("/dashboard"));
   }
 
+  componentWillUnmount() { 
+      this.props.receiveErrors([]);
+    }
+
   renderErrors() {
     return(
       <ul>
@@ -37,9 +41,12 @@ class SessionForm extends React.Component {
 
   render() {
 
-    const button_text = this.props.formType === 'login' ? "Log in" : "Sign me up!"
+    // const button_text = this.props.formType === 'login' ? "Log in" : "Sign me up!"
 
-    const name_input_flag = this.props.formType === 'login' ? "no-name-input" : "with-name-input"
+    // const name_input_flag = this.props.formType === 'login' ? "no-name-input" : "with-name-input"
+
+
+  const error_flag = this.props.errors.length > 0 ? 'show-login-error' : 'dont-show-login-error'
 
     return (
       <div className="login-form-container">
@@ -67,6 +74,13 @@ class SessionForm extends React.Component {
           </nav>
         </header>
 
+        
+        <div className={error_flag}>
+          <div className='login-errors-list'>
+            {this.renderErrors()}
+          </div>
+        </div>
+
         <section className='session-section'>
             <section className='session-left'>
                 {/* <img className='session-section-logo'src="assets/splitsum_logo.png" alt=""/> */}
@@ -82,7 +96,7 @@ class SessionForm extends React.Component {
                 
                 <div className="session-form">
                   <br/>
-                 
+{/*                  
                   <span className={name_input_flag}>Name</span> 
                     <br/>
                     <input type="text"
@@ -91,7 +105,7 @@ class SessionForm extends React.Component {
                       className={name_input_flag}
                       />
                     <br/>
-                  
+                   */}
                   <span>Email address</span> 
                     <br/>
                     <input type="text"
@@ -109,11 +123,9 @@ class SessionForm extends React.Component {
                       className="session-input"
                       />
                     <br/>
-                  <input className="session-submit" type="submit" value={button_text} />
+                  <input className="session-submit" type="submit" value='Log in' />
                     <br/>
-                  <div className='render-errors'>
-                    {this.renderErrors()}
-                  </div>
+                  
                 </div>
               </form>
           </section>
@@ -123,4 +135,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default LogInForm;

@@ -1,3 +1,5 @@
+@import "base/colors.scss";
+
 .main-section {
   // border: 1px solid grey;
   height: 600px;
@@ -51,14 +53,14 @@
   margin-top: 10px;
   font-family: Montserrat;
   font-weight: 700;
-  color: #373B3F;
+  color: $headertext-grey;
   font-size: 39.5px;
   line-height: 50px;
   max-width: 390px;
 }
 
 .section-header span {
-  color: #1cc29f;
+  color: $main-green;
 }
 
 .section-text {
@@ -76,7 +78,7 @@
   cursor: pointer;
   height: 61px;
   width: 205px;
-  background-color: #1CC29F;
+  background-color: $main-green;
   font-family: Montserrat;
   font-weight: 600;
   font-size: 14px;
@@ -96,14 +98,14 @@
    margin-top: 10px;
   font-family: Lato;
   font-weight: 500;
-  color: #373B3F;
+  color: $headertext-grey;
   font-size: 14px;
   text-decoration: none;
  }
 
  .section-footer-link {
    text-decoration: none;
-   color: #373B3F
+   color: $headertext-grey
  }
 
  

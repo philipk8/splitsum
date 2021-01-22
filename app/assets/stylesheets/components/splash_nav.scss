@@ -1,30 +1,18 @@
-// .main-page {
-//   // display: flex;
-//   // justify-content: space-between;
-//   // max-width: 1218px;
-//   // margin: auto;
-//   // left: 50%;
-//   // text-align: center;
-// }
+@import "base/colors.scss";
 
 .splash-nav {
   max-width: 1218px;
   margin: auto;
-  // margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  // border: 1px solid grey;
   margin-bottom: 9px;
 }
 
 .left-nav{
   display: flex;
   align-items: center;
-  // padding: 0 0 0 10px;
-  // margin: 10px;
-  // border: 1px solid grey;
 }
 
 .right-nav{
@@ -47,7 +35,7 @@
   font-weight: 650;
   text-decoration: none;
   font-size: 18px;
-  color: #373B3F;
+  color: $headertext-grey;
   margin: 8px;
   margin-top: 15px;
   // border: 1px solid grey;
@@ -58,7 +46,7 @@
   font-weight: 600;
   text-decoration: none;
   font-size: 14px;
-  color:#1CC29F;
+  color: $main-green;
   // color: $main-green ;
   margin-right: 12px;
   // border: 1px solid grey;
@@ -68,7 +56,7 @@
    cursor: pointer;
    height: 46px;
    width: 95px;
-   background-color: #1CC29F;
+   background-color: $main-green;
    font-family: Montserrat;
    font-weight: 600;
    font-size: 14px;
