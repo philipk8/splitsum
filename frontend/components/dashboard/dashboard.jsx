@@ -8,9 +8,6 @@ class Dashboard extends React.Component {
     super(props);
   }
 
-    <h2>{this.props.currentUser.name}</h2>
-            <button onClick={() => this.props.logout()}>Log Out</button>
-
   render() {
     return (
       <div className='db-main'>
@@ -22,7 +19,7 @@ class Dashboard extends React.Component {
             </nav>
             <nav className='db-right-nav'>
               <div className='db-user-dropdown'>
-                  <p>{this.props.currentUser.name}</p>
+                  <p>Hi, {this.props.currentUser.name}!</p>
               </div>
               <button className='db-logout-button'onClick={() => this.props.logout()}>Log Out</button>
             </nav>
