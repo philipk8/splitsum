@@ -62,7 +62,8 @@ const SplashPage = () => (
         </section>
 
         <section className='right-section'>
-            <img className='airplane'src="assets/airplane_icon.png" alt=""/>
+            {/* <img className='airplane'src="assets/airplane_icon.png" alt=""/> */}
+            <img className='airplane'src={window.airplane_icon} alt=""/>
         </section>
       </section>
     </section>
