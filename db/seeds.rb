@@ -10,7 +10,7 @@ ActiveRecord::Base.transaction do
   User.destroy_all
   # Friend.destroy_all
 
-  u1 = User.create!(name: 'demo_user' email: 'demo_user@email.com' password: '123456')
+  u1 = User.create!(name: 'demo_user', email: 'demo_user@email.com', password: '123456')
   
   
   
