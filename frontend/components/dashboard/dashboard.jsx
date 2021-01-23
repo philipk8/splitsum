@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import SplashPage from './splash_page'
-
+import UserDropDown from './user_dropdown'
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -20,9 +19,11 @@ class Dashboard extends React.Component {
             </nav>
             <nav className='db-right-nav'>
               <div className='db-user-dropdown'>
-                  <p>Hi, {this.props.currentUser.name}!</p>
+                <UserDropDown logout={this.props.logout} currentUser={this.props.currentUser}/>
               </div>
-              <button className='db-logout-button'onClick={() => this.props.logout()}>Log Out</button>
+                  {/* <p>Hi, {this.props.currentUser.name}!</p>
+              </div>
+              <button className='db-logout-button'onClick={() => this.props.logout()}>Log Out</button> */}
             </nav>
           </nav>
         </header>

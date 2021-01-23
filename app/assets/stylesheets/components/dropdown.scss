@@ -1,0 +1,82 @@
+@import "base/colors.scss";
+
+.dd-button {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: $main-green;
+  // height: 31px;
+}
+.dd-button:hover {
+  background-color:#48be9e;
+  cursor: pointer; 
+}
+.dd-username {
+  // border: 1px solid blue;
+  // color: blue;
+  font-family: Lato;
+  font-size: 14px;
+  color: #ffffff;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+// .dd-menu {
+//   border: 1px solid green;
+
+// }
+
+.dd-menu-ul {
+  // display: flex;
+  // justify-content: start;
+  // flex-direction: column;
+
+  width: 162px;
+  height: 30px;
+  border: 1px solid grey;
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 26px;
+  font-size: 14px;
+  font-family: Lato;
+  border-radius: 3px;
+
+  box-shadow: 3px 3px 3px lightgrey;
+  
+  // white-space: nowrap;
+  background: #fff;
+  // border-left: 1px solid #ccc;
+  // border-right: 1px solid #ccc;
+  // border-bottom: 1px solid #ccc;
+  // border-bottom-left-radius: 5px;
+  // border-bottom-right-radius: 5px;
+  // overflow: hidden;
+
+}
+
+// .dd-button img {
+//   width: 5px;
+//   border: 1px solid yellow;
+// }
+
+.user-icon {
+  width: 20px;
+}
+.dropdown-arrow {
+  width: 10px;
+  // position: absolute;
+  margin-top: 5px;
+}
+.logout-li-item {
+  // border: 1px solid red;
+  cursor: pointer; 
+  margin-top: 5px;
+  padding-right: 80px;
+}
+
+.logout-li-item:hover {
+  background-color: $main-green;
+}
