@@ -73,6 +73,9 @@
   width: 319px;
   height: 35px;
   margin-bottom: 25px; 
+  color: #333333;
+  font-family: Lato;
+  font-size: 18px;
 }
 .dont-show-input, .dont-show-error {
   visibility: hidden;
@@ -90,6 +93,9 @@
   border-color: 0.5px solid lightgrey ;
   width: 319px;
   height: 51px;
+  color: #333333;
+  font-family: Lato;
+  font-size: 24px;
 }
 
 span.show-input {
