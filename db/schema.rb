@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_19_213401) do
+ActiveRecord::Schema.define(version: 2021_01_23_144111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "body"
+    t.integer "commenter_id"
+    t.integer "expense_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "expense_details", force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.string "category"
+    t.string "description"
+    t.string "notes"
+    t.float "amount", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_expense_details_on_author_id"
+  end
+
+  create_table "expense_groups", force: :cascade do |t|
+    t.integer "expense_id", null: false
+    t.integer "split_with_id", null: false
+    t.integer "paid_by_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["expense_id"], name: "index_expense_groups_on_expense_id"
+    t.index ["paid_by_id"], name: "index_expense_groups_on_paid_by_id"
+    t.index ["split_with_id"], name: "index_expense_groups_on_split_with_id"
+  end
+
+  create_table "friends", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "friend_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_friends_on_friend_id"
+    t.index ["user_id"], name: "index_friends_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

@@ -8,6 +8,11 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
+    has_many :friends,
+      foreign_key: :friend_id,
+      class_name: :Friend
+    
+
     # FIPA GERV
 
     def self.find_by_credentials(email, password)
