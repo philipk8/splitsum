@@ -24,6 +24,10 @@ class Api::UsersController < ApplicationController
     render :show
   end
 
+  def destroy
+    
+  end
+
   private
 
   def user_params
