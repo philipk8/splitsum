@@ -12,7 +12,7 @@ import {login, signup, logout} from './actions/session_actions'
 
 import {addFriend, deleteFriend, fetchFriends, fetchFriend} from './actions/friends_actions'
 
-import {fetchUsers} from './actions/users_actions'
+import {fetchUsers} from './actions/users_index_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
   
