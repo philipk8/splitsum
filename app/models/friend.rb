@@ -13,15 +13,15 @@ class Friend < ApplicationRecord
   # has_many :friends,
   # foreign
 
-  def self.find_by_ids(user_id, friend_id)
-    found_friend = Friend
-    .where(user_id: user_id )
-    .where(friend_id: friend_id)
+  # def self.find_by_ids(user_id, friend_id)
+  #   found_friend = Friend
+  #   .where(user_id: user_id )
+  #   .where(friend_id: friend_id)
 
-    debugger 
+  #   debugger 
 
-    return found_friend.as_json
-  end
+  #   return found_friend.as_json
+  # end
 
 
 end

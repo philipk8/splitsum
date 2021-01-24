@@ -7,28 +7,19 @@ class Api::FriendsController < ApplicationController
   end
   
   def destroy
-    @friend = Friend.find_by_ids(
-      params[:friend][:user_id],
-      params[:friend][:friend_id]
-    )
-    # debugger
+    @friend_relation = Friend.find_by(user_id: params[:user_id], friend_id: params[:id])
 
-    @friend.destroy
-    render 'api/friends/show.json.jbuilder'
+    @friend_relation.destroy
+
+    render 'api/friends/friend_relation.json.jbuilder'
+    
     # more like destroying a friendship / a relationship between userid and friendid
   end
   
   def show
-    @friend = Friend.find_by_ids(params[:friend_id]
-    )
+    friend_relation = Friend.find_by(user_id: params[:user_id], friend_id: params[:id])
 
-    debugger 
-
-    # @friend = friend_ar.as_json
-
-    debugger
-
-
+    @friend = User.find_by(id: friend_relation.friend_id)
 
     render 'api/friends/show.json.jbuilder'
 
