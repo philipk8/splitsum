@@ -8,20 +8,13 @@ import configureStore from './store/store'
 
 import {login, signup, logout} from './actions/session_actions'
 
-import {addFriend, removeFriend, fetchFriends, fetchFriend} from './util/friends_api_util'
+// import {addFriend, deleteFriend, fetchFriends, fetchFriend} from './util/friends_api_util'
+
+import {addFriend, deleteFriend, fetchFriends, fetchFriend} from './actions/friends_actions'
+
+import {fetchUsers} from './actions/users_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
-  // // testing 
-  // window.login = login;
-  // window.signup = signup;
-  // window.logout = logout;
-  window.addFriend = addFriend;
-  window.removeFriend = removeFriend;
-  window.fetchFriends = fetchFriends;
-  window.fetchFriend = fetchFriend;
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-  // testing
   
   let store;
   if (window.currentUser) {
@@ -36,6 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
+  
+  // // testing 
+  // window.login = login;
+  // window.signup = signup;
+  // window.logout = logout;
+  window.addFriend = addFriend;
+  window.deleteFriend = deleteFriend;
+  window.fetchFriends = fetchFriends;
+  window.fetchFriend = fetchFriend;
+
+  window.fetchUsers = fetchUsers;
+  
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // testing
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
