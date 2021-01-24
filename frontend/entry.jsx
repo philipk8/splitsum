@@ -8,11 +8,14 @@ import configureStore from './store/store'
 
 import {login, signup, logout} from './actions/session_actions'
 
+import {addFriend} from './util/friends_api_util'
+
 document.addEventListener("DOMContentLoaded", () => {
   // // testing 
   // window.login = login;
   // window.signup = signup;
-  window.logout = logout;
+  // window.logout = logout;
+  window.addFriend = addFriend;
   // window.getState = store.getState;
   // window.dispatch = store.dispatch;
   // testing

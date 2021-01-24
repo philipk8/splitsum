@@ -21,12 +21,34 @@ class Dashboard extends React.Component {
               <div className='db-user-dropdown'>
                 <UserDropDown logout={this.props.logout} currentUser={this.props.currentUser}/>
               </div>
-                  {/* <p>Hi, {this.props.currentUser.name}!</p>
-              </div>
-              <button className='db-logout-button'onClick={() => this.props.logout()}>Log Out</button> */}
             </nav>
           </nav>
         </header>
+
+        <section className='db-section-main'> 
+            <aside className='db-left-bar'> 
+
+            <button className='db-left-db-btn'>
+              <span className='db-left-db-wrd'>Dashboard</span>
+            </button>
+
+            <button className='db-left-ra-btn'>
+              <span className='db-left-ra-wrd'>Recent Activity</span>
+            </button>
+
+            <button className='db-left-ae-btn'>
+              <span className='db-left-ae-wrd'>All expenses</span>
+            </button>
+
+            <button className='db-left-fl-btn'>
+              <span className='db-left-fl-wrd'>Friends</span>
+            </button>
+
+
+
+            </aside>
+        </section>
+
       </div>
     )
   }

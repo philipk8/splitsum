@@ -1,0 +1,15 @@
+.db-section-main {
+  max-width: 941px;
+  margin: auto;
+  display: flex;
+  border: 1px solid blue;
+}
+
+.db-left-bar {
+  height: 800px;
+  width: 167px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid grey;
+}
