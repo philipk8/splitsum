@@ -8,7 +8,7 @@ import configureStore from './store/store'
 
 import {login, signup, logout} from './actions/session_actions'
 
-import {addFriend} from './util/friends_api_util'
+import {addFriend, removeFriend, fetchFriends, fetchFriend} from './util/friends_api_util'
 
 document.addEventListener("DOMContentLoaded", () => {
   // // testing 
@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.signup = signup;
   // window.logout = logout;
   window.addFriend = addFriend;
+  window.removeFriend = removeFriend;
+  window.fetchFriends = fetchFriends;
+  window.fetchFriend = fetchFriend;
   // window.getState = store.getState;
   // window.dispatch = store.dispatch;
   // testing

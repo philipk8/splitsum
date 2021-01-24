@@ -1,8 +1,14 @@
-export const login = user => (
+export const fetchFriends = user_id => (
   $.ajax({
-    method: 'POST',
-    url: '/api/session',
-    data: { user }
+    method: 'GET',
+    url: `/api/users/${user_id}/friends`,
+  })
+);
+
+export const fetchFriend = friend => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/users/${friend.user_id}/friends/${friend.friend_id}`,
   })
 );
 
@@ -14,10 +20,10 @@ export const addFriend = friend => (
   })
 );
 
-export const logout = () => (
+export const removeFriend = friend => (
   $.ajax({
     method: 'DELETE',
-    url: '/api/session'
+    url: `/api/users/${friend.user_id}/friends/${friend.friend_id}`
   })
 );
 
