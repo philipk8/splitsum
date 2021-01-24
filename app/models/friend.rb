@@ -10,6 +10,18 @@ class Friend < ApplicationRecord
   foreign_key: :user_id,
   class_name: :User
 
-  
+  # has_many :friends,
+  # foreign
+
+  def self.find_by_ids(user_id, friend_id)
+    found_friend = Friend
+    .where(user_id: user_id )
+    .where(friend_id: friend_id)
+
+    debugger 
+
+    return found_friend.as_json
+  end
+
 
 end

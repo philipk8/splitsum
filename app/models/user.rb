@@ -16,8 +16,33 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Friend
 
-    def friends
-      # User.friendships 
+    def friend_names
+
+      friend_id_arr = self.friendships.pluck(:friend_id)
+
+      # arr = []
+
+      # friend_id_arr.each do |id|
+      #   arr << User.where(id: id).pluck(:name)
+      # end
+
+      return User.find(friend_id_arr).pluck(:name)
+
+    end
+
+    def friend_list
+
+      friend_id_arr = self.friendships.pluck(:friend_id)
+
+      # arr = []
+
+      # friend_id_arr.each do |id|
+      #   arr << User.where(id: id).pluck(:name)
+      # end
+      return User.find(friend_id_arr)
+      # finding the users by the friend_id
+      # so i will get the persons id or friend.id back
+
     end
 
     
