@@ -6,6 +6,15 @@ import DashboardLeft from './dashboard_left'
 class FriendShow extends React.Component {
   constructor(props) {
     super(props);
+    this.deleteFriend = this.deleteFriend.bind(this);
+  }
+
+  deleteFriend() {
+    const user_id = this.props.currentUser.id
+    const friend_id = this.props.friend.id
+    const friend = {user_id: user_id, friend_id: friend_id}
+    this.props.deleteFriend(friend);
+    this.props.fetchFriends(user_id).then(() => this.props.history.push("/dashboard"))
   }
 
   render() {
@@ -34,6 +43,21 @@ class FriendShow extends React.Component {
             <p className='friend-show-header'> 
             friends show page; placeholder text
             </p>
+          </section>
+          
+          <section className='friend-show-right'>
+            <button className='remove-friend-btn' onClick={this.deleteFriend}>
+              Remove this friend
+            </button>
+            <br/>
+            <p className='right-your-balance'> 
+            Your Balance
+            </p>
+            <br/>
+             <p className='right-balance-amount'> 
+            friend owes you $10
+            </p>
+            <br/>
           </section>
 
         </section>
