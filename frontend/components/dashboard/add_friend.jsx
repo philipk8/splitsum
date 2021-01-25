@@ -7,7 +7,7 @@ class AddFriend extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      friend: ''
+      friend: 'test'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

@@ -14,7 +14,11 @@ class FriendsList extends React.Component {
           {
           this.props.friends.map( (friend, i) =>
              
-            <li key={`friend-${i}`}>{friend.name}</li>
+            <li key={`friend-${i}`} className='friend-list-box'>
+              <img src={window.friend_list_icon} alt="" className='friend-list-icon'/>
+                
+              {friend.name}
+            </li>
           )
           }
         </ul>
