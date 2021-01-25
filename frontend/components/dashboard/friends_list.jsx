@@ -16,7 +16,7 @@ class FriendsList extends React.Component {
              
             <li key={`friend-${i}`} className='friend-list-box'>
               <img src={window.friend_list_icon} alt="" className='friend-list-icon'/>
-              <Link to={`/friends/${friend.id}`} className='friend-link'>
+              <Link to={`/friends/`} className='friend-link'>
               {friend.name}
               </Link>
             </li>
