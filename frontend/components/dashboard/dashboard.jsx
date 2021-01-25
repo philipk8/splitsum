@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import UserDropDown from './user_dropdown'
+import DashboardHeader from './dashboard_header';
+// import UserDropDown from './user_dropdown'
+import DashboardLeft from './dashboard_left'
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -10,43 +12,21 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className='db-main'>
+        
         <header className='db-header'>
-          <nav className='db-nav-elements'>
-            <nav className='db-left-nav'>
-              {/* <img className='db-logo' src="assets/splitsum_logo.png" alt=""/> */}
-              <img className='db-logo' src={window.splitsum_logo} alt=""/>
-              <Link to="/" className='db-word-logo'>Splitsum</Link>
-            </nav>
-            <nav className='db-right-nav'>
-              <div className='db-user-dropdown'>
-                <UserDropDown logout={this.props.logout} currentUser={this.props.currentUser}/>
-              </div>
-            </nav>
-          </nav>
+            <DashboardHeader logout={this.props.logout} currentUser={this.props.currentUser}/>
         </header>
 
         <section className='db-section-main'> 
-            <aside className='db-left-bar'> 
-
-            <button className='db-left-db-btn'>
-              <span className='db-left-db-wrd'>Dashboard</span>
-            </button>
-
-            <button className='db-left-ra-btn'>
-              <span className='db-left-ra-wrd'>Recent Activity</span>
-            </button>
-
-            <button className='db-left-ae-btn'>
-              <span className='db-left-ae-wrd'>All expenses</span>
-            </button>
-
-            <button className='db-left-fl-btn'>
-              <span className='db-left-fl-wrd'>Friends</span>
-            </button>
-
-
-
-            </aside>
+            <DashboardLeft 
+              fetchFriends={this.props.fetchFriends}
+              fetchFriend={this.props.fetchFriend}
+              addFriend={this.props.addFriend}
+              deleteFriend={this.props.deleteFriend}
+              fetchUsers={this.props.fetchUsers}
+              currentUser={this.props.currentUser}
+              friends={this.props.friends}
+            />
         </section>
 
       </div>

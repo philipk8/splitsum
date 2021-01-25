@@ -1,5 +1,6 @@
 import React from 'react';
 import DropDownMenu from './dropdown_menu'
+import DashboardHeader from './dashboard_header'
 
 class UserDropDown extends React.Component {
   constructor(props) {
