@@ -82,10 +82,10 @@
 
 .friends-list-head {
   background-color:$lightest-grey;
-  width: 160px;
+  width: 167px;
   padding-top: 2px;
   padding-bottom: 2px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .friend-list-icon {
@@ -100,18 +100,48 @@
   font-weight: 500;
   font-size:14.5px;
   color: $lighter-grey;
+
 }
 
 .add-friend-form {
-  border: 1px solid $lighter-grey;
-  box-shadow: 1px 1px 1px $lighter-grey;
+  border: 1px solid $lighter2-grey;
+  // box-shadow: 1px 1px 1px $lighter-grey;
   margin-top: 15px;
-
+  height: 85px;
+  // display: flex;
+  // padding: 3px;
+  width:167px;
 }
 
 .add-friend-wrd {
   color: white; 
   background-color: $light-green;
   font-family: Lato;
-  font-size: 15px;
+  font-size: 16px;
+  padding-top:4px;
+  padding-bottom:4px;
+  padding-left: 5px;
+  // margin-left: 5px;
+}
+.users-index-box {
+  font-family: Lato;
+  font-weight: 500;
+  font-size:14.5px;
+  color: $lighter-grey;
+  width: 156px;
+  // padding-left: 3px;
+  padding-right: 2px;
+  margin: 6px;
+  border: 1px solid $lighter2-grey;
+}
+
+.add-friend-submit {
+  font-family: Lato;
+  font-size: 12px;
+  margin-left: 5px;
+  color: $headertext-grey;
+  background-color: $lightest-grey;
+  border: 1px solid $lighter2-grey;
+  padding: 3.5px; 
+  border-radius: 2px;
 }
