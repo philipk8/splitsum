@@ -7,7 +7,7 @@ class Api::FriendsController < ApplicationController
     # @friend.save 
     # render 'api/friends/show.json.jbuilder'
     @friend = User.find(@friend_relation.friend_id)
-debugger
+# debugger
     render 'api/friends/show.json.jbuilder'
     # creating a friendship / a relation ; this view just shows a relationship
   end
