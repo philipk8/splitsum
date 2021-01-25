@@ -26,6 +26,7 @@ class Dashboard extends React.Component {
               fetchUsers={this.props.fetchUsers}
               currentUser={this.props.currentUser}
               friends={this.props.friends}
+              usersIndex={this.props.usersIndex}
             />
         </section>
 

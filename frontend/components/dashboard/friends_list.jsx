@@ -12,9 +12,9 @@ class FriendsList extends React.Component {
       <div>
         <ul>
           {
-          this.props.friends.map( friend =>
+          this.props.friends.map( (friend, i) =>
              
-            <li>{friend.name}</li>
+            <li key={`friend-${i}`}>{friend.name}</li>
           )
           }
         </ul>

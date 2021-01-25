@@ -9,11 +9,12 @@ import { fetchUsers } from '../../actions/users_index_actions'
 
 import Dashboard from './dashboard';
 
-const msp = ({ session, entities: { users, friends } }) => {
+const msp = ({ session, entities: { users, friends, usersIndex } }) => {
   // destructuring; grabbing values of session and entiries from the state; state.session etc 
   return {
     currentUser: users[session.id],
-    friends: Object.values(friends)
+    friends: Object.values(friends),
+    usersIndex: Object.values(usersIndex)
   };
 };
 
