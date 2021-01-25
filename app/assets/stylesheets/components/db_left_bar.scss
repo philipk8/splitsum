@@ -101,3 +101,17 @@
   font-size:14.5px;
   color: $lighter-grey;
 }
+
+.add-friend-form {
+  border: 1px solid $lighter-grey;
+  box-shadow: 1px 1px 1px $lighter-grey;
+  margin-top: 15px;
+
+}
+
+.add-friend-wrd {
+  color: white; 
+  background-color: $light-green;
+  font-family: Lato;
+  font-size: 15px;
+}
