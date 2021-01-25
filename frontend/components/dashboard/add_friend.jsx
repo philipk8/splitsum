@@ -42,7 +42,7 @@ class AddFriend extends React.Component {
           {
             this.props.usersIndex.map( (user,i) =>
               <option key={`user-${i}`} value={user.id}>
-                {user.name}
+                  {user.name}
               </option>
             )
           }
