@@ -14,20 +14,25 @@ class DashboardLeft extends React.Component {
     return (
       <aside className='db-left-bar'> 
 
-        <button className='db-left-db-btn'>
+        <Link to='/dashboard' className='db-left-db-lnk'>
+          <img className='db-left-db-logo' src={window.splitsum_logo_grey} alt=""/>
           <span className='db-left-db-wrd'>Dashboard</span>
-        </button>
+        </Link>
 
         {/* <button className='db-left-ra-btn'>
           <span className='db-left-ra-wrd'>Recent Activity</span>
         </button> */}
 
-        <button className='db-left-ae-btn'>
+        <Link className='db-left-ae-lnk'>
+          <img className='db-left-ae-logo' src={window.menu_icon} alt=""/>
           <span className='db-left-ae-wrd'>All expenses</span>
-        </button>
+        </Link>
+
+        <div className='friends-list-head'>
+          <span className='friends-list-wrd'>Friends</span>
+        </div>
 
         <div className='db-left-friends-list'>
-          <span className='friends-list-wrd'>Friends</span>
           <FriendsList 
             friends={this.props.friends}
             fetchFriends={this.props.fetchFriends}
