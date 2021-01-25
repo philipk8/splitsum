@@ -14,6 +14,8 @@ import SignUpFormContainer from './session_form/signup_form_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashPage from './splash/splash_page'
 
+import FriendShowContainer from './dashboard/friend_show_container'
+
 const App = () => (
   <div>
 
@@ -23,6 +25,8 @@ const App = () => (
       <AuthRoute exact path="/" component={SplashPage} />
       <ProtectedRoute exact path="/dashboard" component={DashBoardContainer} />
       
+      <Route path="/friends/:friendId" component={FriendShowContainer} />
+
     </Switch>
   </div>
 );

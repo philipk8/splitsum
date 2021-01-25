@@ -5,9 +5,9 @@ import { fetchFriends, fetchFriend, addFriend, deleteFriend } from '../../action
 
 import { fetchUsers } from '../../actions/users_index_actions' 
 
-
-
 import Dashboard from './dashboard';
+
+
 
 const msp = ({ session, entities: { users, friends, usersIndex } }) => {
   // destructuring; grabbing values of session and entiries from the state; state.session etc 

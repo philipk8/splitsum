@@ -12,7 +12,7 @@ class DashboardLeft extends React.Component {
   render() {
 
     return (
-      <aside className='db-left-bar'> 
+      <div> 
 
         <Link to='/dashboard' className='db-left-db-lnk'>
           <img className='db-left-db-logo' src={window.splitsum_logo_grey} alt=""/>
@@ -23,7 +23,7 @@ class DashboardLeft extends React.Component {
           <span className='db-left-ra-wrd'>Recent Activity</span>
         </button> */}
 
-        <Link className='db-left-ae-lnk'>
+        <Link to='/all' className='db-left-ae-lnk'>
           <img className='db-left-ae-logo' src={window.menu_icon} alt=""/>
           <span className='db-left-ae-wrd'>All expenses</span>
         </Link>
@@ -52,7 +52,7 @@ class DashboardLeft extends React.Component {
 
 
 
-      </aside>
+      </div>
     )}
 
 }

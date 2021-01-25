@@ -7,7 +7,7 @@ class AddFriend extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      friend: 'test'
+      friend: 'test',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -34,17 +34,19 @@ class AddFriend extends React.Component {
     // this.props.processForm(user).then(() => this.props.history.push("/dashboard"));
   }
 
+
   render() {
     return(
       <form onSubmit={this.handleSubmit } className='add-friend-form'>
         <p className='add-friend-wrd'>Add Friends</p>
-        <select className='users-index-box' value={this.state.friend} onChange={this.update('friend')}>
+        <select className='users-index-box' onChange={this.update('friend') } value={this.state.friend} >
           {
-            this.props.usersIndex.map( (user,i) =>
-              <option key={`user-${i}`} value={user.id}>
+            this.props.usersIndex.map( (user,i) => {
+              
+              return (<option key={`user-${i}`} value={user.id}>
                   {user.name}
               </option>
-            )
+            )})
           }
         {/* <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>

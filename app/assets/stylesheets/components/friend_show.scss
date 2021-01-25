@@ -1,0 +1,19 @@
+@import "base/colors.scss";
+
+.friend-show-center {
+  border: 1px solid grey;
+  width: 560px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.friend-show-header {
+  font-family: Lato;
+  font-size: 14px;
+  color: $light-grey
+}
+
+
+
