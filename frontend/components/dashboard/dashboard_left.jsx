@@ -47,6 +47,7 @@ class DashboardLeft extends React.Component {
             addFriend={this.props.addFriend}
             usersIndex ={this.props.usersIndex}
             fetchFriends={this.props.fetchFriends}
+            friends={this.props.friends}
           />
         </div>
 

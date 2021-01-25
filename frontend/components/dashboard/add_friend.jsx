@@ -42,16 +42,20 @@ class AddFriend extends React.Component {
         <select className='users-index-box' onChange={this.update('friend') } value={this.state.friend} >
           {
             this.props.usersIndex.map( (user,i) => {
-              
+              const friends_arr = this.props.friends.map( (ele) => ele.id )
+              // const friends_arr = [54]
+              if (i === 0) {
+              return (<option key={`user-${i}`} value={user.id}>
+                  select a friend
+              </option>)
+              }
+               else if (user.id !== this.props.currentUser.id && !friends_arr.includes(user.id) ) {
               return (<option key={`user-${i}`} value={user.id}>
                   {user.name}
-              </option>
-            )})
+              </option>)
+               }
+            })
           }
-        {/* <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="fiat">Fiat</option>
-        <option value="audi">Audi</option> */}
       </select>
       <br/>
         <input className="add-friend-submit" type="submit" value='Add Friend' />
