@@ -7,10 +7,11 @@ class ExpenseDetail < ApplicationRecord
   class_name: :User
 
   has_many :expense_groups,
+  dependent: :destroy,
   foreign_key: :expense_id,
   class_name: :ExpenseGroup
 
-  
+
 
 
 end
