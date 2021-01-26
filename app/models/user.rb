@@ -30,10 +30,67 @@ class User < ApplicationRecord
 
   def you_are_owed
     # self.paid_expenses
+    paid_expenses = self.paid_expenses
+    total_records = paid_expenses.count(:id)
+    # distinct_expenses = paid_expenses.count(:expense_id)
+    
+    expense_ids = paid_expenses.pluck(:expense_id)
+    distinct_expense_ids = expense_ids.uniq
+    
+    
+    share_count_owed = total_records - distinct_expense_ids.count()
+    
+    # debugger
+
+    sum = 0 
+    distinct_expense_ids.each do |expense_id|
+      expense_item = ExpenseDetail.find(expense_id)
+      expense_amount = expense_item.amount
+      sum += expense_amount
+    end
+
+    each_share = sum / total_records
+
+    # debugger
+    
+    owed_to_you = each_share * share_count_owed
+    
+    return owed_to_you
+
+    #  paid_expenses.each do |expense|
+    #   sum = 0
+    #   amount = ExpenseDetail.find(expense.expense_id)
+    #   if expense.split_with_id != current_user.id
+
+    #   end
+    # end
   end
   
   def you_owe
+    split_with_rows = self.split_with_expenses
+    total_split_num = split_with_rows.count()
+  
+    rows_didnt_pay = split_with_rows.where.not(paid_by_id: self.id)
+    liable_split_num = rows_didnt_pay.count()
+    expense_ids = rows_didnt_pay.pluck(:expense_id).uniq
+
+    expense_group_rows = ExpenseGroup.where(:expense_id => [expense_ids]).count()
+
+# debugger 
+    sum = 0 
+    expense_ids.each do |expense_id|
+      expense_item = ExpenseDetail.find(expense_id)
+      expense_amount = expense_item.amount
+      sum += expense_amount
+    end
+
+    each_share = sum / expense_group_rows
+
     
+    owed_by_you = each_share * liable_split_num
+# debugger
+    
+    return owed_by_you
   end
 
 
