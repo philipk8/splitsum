@@ -13,6 +13,18 @@ class Api::ExpensesController < ApplicationController
       ExpenseGroup.create(expense_id: expense_id, split_with_id: payee_id, paid_by_id: paid_by_id)
     end
     # render json that shows 
+
+    # @hash = {}
+    # expense_hash = @expense.to_hash
+    # split_hash = expense_detail.calc_split
+    # expense_hash[:split] = split_hash
+
+    #   @hash[expense_detail.id] = expense_hash
+
+
+    render "api/expenses/show.json.jbuilder"
+
+
   end
 
   def index
@@ -30,9 +42,10 @@ class Api::ExpensesController < ApplicationController
     expense_ids = expenses_involved.pluck(:expense_id).uniq
 
     expense_details_records = ExpenseDetail.where(:id => [expense_ids])
-    
+  # debugger
     # expense_details_hash = expense_details_records.all.index_by(&:id)
     # expense_details_arr = expense_details_records.as_json
+
     @hash = {}
 
     expense_details_records.each do |expense_detail|
@@ -60,10 +73,34 @@ class Api::ExpensesController < ApplicationController
 
   def show
     # essentially no show; it;s all one long index that expands when you click on an individual item
+    @expense = ExpenseDetail.find(params[:id])
+
+    render "api/expenses/show.json.jbuilder"
   end
 
   def update
+    @expense = ExpenseDetail.find_by(id: params[:id])
+    @expense.update(expense_params)
+    
+    expense_id = @expense.id
+    payees_arr = params[:expense][:friends_arr]
+    payees_arr << current_user.id
+
+    paid_by_id = params[:expense][:paid_by_id]
+
+    payees_arr.each do |payee_id|
+      ExpenseGroup.create(expense_id: expense_id, split_with_id: payee_id, paid_by_id: paid_by_id)
+    end
+
+    render "api/expenses/show.json.jbuilder"
+
   end
+
+  def destroy
+    @expense = ExpenseDetail.find(params[:id])
+    @expense.destroy 
+    render "api/expenses/show.json.jbuilder"
+  end 
 
 
 
