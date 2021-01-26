@@ -7,14 +7,25 @@ class User < ApplicationRecord
     attr_reader :password
 
     after_initialize :ensure_session_token
-
-    # has_many :friends,
-    #   foreign_key: :friend_id,
-    #   class_name: :Friend
     
     has_many :friendships,
     foreign_key: :user_id,
     class_name: :Friend
+
+    has_many :expenses_authored,
+    foreign_key: :author_id,
+    class_name: :ExpenseDetail
+
+    has_many :split_with_expenses,
+    foreign_key: :split_with_id,
+    class_name: :ExpenseGroup
+    
+    has_many :paid_expenses,
+    foreign_key: :paid_by_id,
+    class_name: :ExpenseGroup
+
+
+
 
     def friend_names
 

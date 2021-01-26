@@ -24,20 +24,25 @@ ActiveRecord::Schema.define(version: 2021_01_26_032953) do
   end
 
   create_table "expense_details", force: :cascade do |t|
-    t.integer "author_id"
+    t.integer "author_id", null: false
     t.string "category"
     t.string "description"
+    t.float "amount", null: false
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_expense_details_on_author_id"
   end
 
   create_table "expense_groups", force: :cascade do |t|
-    t.integer "expense_id"
-    t.integer "split_with_id"
-    t.integer "paid_by_id"
+    t.integer "expense_id", null: false
+    t.integer "split_with_id", null: false
+    t.integer "paid_by_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["expense_id"], name: "index_expense_groups_on_expense_id"
+    t.index ["paid_by_id"], name: "index_expense_groups_on_paid_by_id"
+    t.index ["split_with_id"], name: "index_expense_groups_on_split_with_id"
   end
 
   create_table "friends", force: :cascade do |t|
