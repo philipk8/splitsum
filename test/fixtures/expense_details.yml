@@ -5,11 +5,9 @@ one:
   category: MyString
   description: MyString
   notes: MyString
-  amount: 1.5
 
 two:
   author_id: 1
   category: MyString
   description: MyString
   notes: MyString
-  amount: 1.5

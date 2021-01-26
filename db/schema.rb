@@ -1,4 +1,4 @@
-\# This file is auto-generated from the current state of the database. Instead
+# This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_23_144111) do
+ActiveRecord::Schema.define(version: 2021_01_26_032953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,25 +24,20 @@ ActiveRecord::Schema.define(version: 2021_01_23_144111) do
   end
 
   create_table "expense_details", force: :cascade do |t|
-    t.integer "author_id", null: false
+    t.integer "author_id"
     t.string "category"
     t.string "description"
     t.string "notes"
-    t.float "amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_expense_details_on_author_id"
   end
 
   create_table "expense_groups", force: :cascade do |t|
-    t.integer "expense_id", null: false
-    t.integer "split_with_id", null: false
-    t.integer "paid_by_id", null: false
+    t.integer "expense_id"
+    t.integer "split_with_id"
+    t.integer "paid_by_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["expense_id"], name: "index_expense_groups_on_expense_id"
-    t.index ["paid_by_id"], name: "index_expense_groups_on_paid_by_id"
-    t.index ["split_with_id"], name: "index_expense_groups_on_split_with_id"
   end
 
   create_table "friends", force: :cascade do |t|
