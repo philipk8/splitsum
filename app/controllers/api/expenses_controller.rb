@@ -25,7 +25,6 @@ class Api::ExpensesController < ApplicationController
 
     # show everything; only when clicked, it becomes bigger to show the detail per expense 
 
-  debugger 
     expenses_involved = current_user.split_with_expenses
 
     expense_ids = expenses_involved.pluck(:expense_id).uniq
@@ -33,33 +32,29 @@ class Api::ExpensesController < ApplicationController
     expense_details_records = ExpenseDetail.where(:id => [expense_ids])
     
     # expense_details_hash = expense_details_records.all.index_by(&:id)
-    expense_details_arr = expense_details_records.as_json
+    # expense_details_arr = expense_details_records.as_json
+    @hash = {}
 
-    hash = {}
+    expense_details_records.each do |expense_detail|
+      expense_hash = expense_detail.to_hash
+      # hash[expense_detail["id"] = {
+      #   id: expense_detail.id,
+      #   author_id: expense_detail.author_id,
+      #   category: expense_detail.category,
+      #   description: expense_detail.description,
+      #   amount: expense_detail.amount,
+      #   notes: expense_detail.notes
+      # }
+      split_hash = expense_detail.calc_split
+      expense_hash[:split] = split_hash
 
-    expense_details_arr.each do |expense_detail|
-      hash[expense_detail.id] = {
-        id: expense_detail.id,
-        author_id: expense_detail.author_id,
-        category: expense_detail.category,
-        description: expense_detail.description,
-        amount: expense_detail.amount,
-        notes: expense_detail.notes
-      }
+      hash[expense_detail.id] = expense_hash
+      # hash[expense_detail.id][split] = split_hash
     end
 
-    
+    return @hash 
 
-
-
-
-# debugger
-    # expense_ids.each do |expense_id|
-    #   expense_detail = ExpenseDetail.find(expense_id)
-
-    # end
-
-
+    render 
   end
 
   def show
