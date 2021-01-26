@@ -7,3 +7,10 @@ export const addExpense = expense => (
   })
 );
 
+export const fetchExpenses = () => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/expenses`,
+  })
+);
+

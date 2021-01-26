@@ -93,6 +93,9 @@ class User < ApplicationRecord
     return owed_by_you
   end
 
+  def total_balance
+    return self.you_are_owed - self.you_owe
+  end
 
 
 
