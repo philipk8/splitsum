@@ -48,13 +48,14 @@ class Api::ExpensesController < ApplicationController
       split_hash = expense_detail.calc_split
       expense_hash[:split] = split_hash
 
-      hash[expense_detail.id] = expense_hash
+      @hash[expense_detail.id] = expense_hash
       # hash[expense_detail.id][split] = split_hash
     end
 
-    return @hash 
+    # return @hash 
+    render json: @hash
 
-    render 
+    # render "api/expenses/index.json.jbuilder"
   end
 
   def show
