@@ -9,7 +9,7 @@ const expensesReducer = (state = {}, action) => {
       return Object.assign({}, state, {[action.expense.id]: action.expense })
     case REMOVE_EXPENSE:
       const newState = Object.assign({}, state)
-      delete newState[action.expense.id]
+      delete newState[action.expenseId]
       return newState
     default:
       return state;
