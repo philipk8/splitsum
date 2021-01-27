@@ -28,11 +28,11 @@ class ExpenseDetail < ApplicationRecord
   
     expense_group = self.expense_groups
 
-    amount = self.amount
+    amount = self.amount * 1.00
 
     num = expense_group.count()
 
-    each_pay = amount / num 
+    each_pay = amount / num * 1.00
 
     hash = {}
 

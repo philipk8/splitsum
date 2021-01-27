@@ -4,6 +4,7 @@ import DashboardHeader from './dashboard_header';
 // import UserDropDown from './user_dropdown'
 import DashboardLeft from './dashboard_left'
 import FriendShowContainer from './friend_show_container'
+import ExpensesIndex from './expenses_index'
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -33,15 +34,33 @@ class Dashboard extends React.Component {
             />
           </aside>
 
+          <section className='db-center'>
+            
+            <div className='db-center-header'>
+              <span className='db-all-expenses'>All expenses</span>
+              <button className='db-add-expense-btn'>Add an expense</button>
+            </div>
+
+            <div className='db-expenses-index'>
+              <ExpensesIndex
+                fetchExpenses={this.props.fetchExpenses}
+                fetchExpense={this.props.fetchExpense}
+                addExpense={this.props.addExpense}
+                updateExpense={this.props.updateExpense}
+                deleteExpense={this.props.deleteExpense}
+
+                currentUser={this.props.currentUser}
+                friends={this.props.friends}
+                expenses={this.props.expenses}usersIndex={this.props.usersIndex}
+              />
+            </div>
+
+          </section>
 
         </section>
 
 
-        {/* <Switch> */}
-        <div className='db-center'>
-          <Route path="/friends/:friendId" component={FriendShowContainer} />
-        {/* </Switch> */}
-        </div>
+       
 
 
       </div>
@@ -72,3 +91,8 @@ export default Dashboard;
 // };
 
 
+//  {/* <Switch> */}
+//         <div className='db-center'>
+//           <Route path="/friends/:friendId" component={FriendShowContainer} />
+//         {/* </Switch> */}
+//         </div>
