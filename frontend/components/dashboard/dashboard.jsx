@@ -6,6 +6,8 @@ import DashboardLeft from './dashboard_left'
 import FriendShowContainer from './friend_show_container'
 import ExpensesIndex from './expenses_index'
 
+import Modal from './modal';
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +21,8 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className='db-main'>
+
+        {/* <Modal /> */}
         
         <header className='db-header'>
             <DashboardHeader logout={this.props.logout} currentUser={this.props.currentUser}/>
@@ -43,7 +47,8 @@ class Dashboard extends React.Component {
             
             <div className='db-center-header'>
               <span className='db-header-wrd'>All expenses</span>
-              <button className='db-add-expense-btn'>Add an expense</button>
+              {/* <button className='db-add-expense-btn'>Add an expense</button> */}
+              {this.props.addExpenseForm}
             </div>
 
             <div className='db-expenses-index'>

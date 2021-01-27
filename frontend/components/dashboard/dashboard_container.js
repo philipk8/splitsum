@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
@@ -7,6 +9,7 @@ import { fetchUsers } from '../../actions/users_index_actions'
 
 import Dashboard from './dashboard';
 
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 
 const msp = ({ session, entities: { users, friends, usersIndex, expenses } }) => {
@@ -37,6 +40,14 @@ const mdp = dispatch => ({
   addExpense: (expense) => dispatch(addExpense(expense)),
   deleteExpense: (expenseId) => dispatch(deleteExpense(expenseId)),
   updateExpense: (expense) => dispatch(deleteExpense(expense)),
+
+  addExpenseForm: (
+      <button className='db-add-expense-btn' onClick={() => dispatch(openModal('addexpense'))}>
+        Add an expense
+      </button>
+    ),
+  closeModal: () => dispatch(closeModal()),
+
 
 
 });

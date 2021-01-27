@@ -16,8 +16,12 @@ import SplashPage from './splash/splash_page'
 
 import FriendShowContainer from './dashboard/friend_show_container'
 
+import Modal from './dashboard/modal'
+
 const App = () => (
   <div>
+
+    <Modal />
 
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
