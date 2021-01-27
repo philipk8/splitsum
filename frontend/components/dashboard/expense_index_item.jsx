@@ -16,6 +16,10 @@ componentDidMount() {
 
     const userPaid = this.props.usersIndexObj[author_id].name
 
+    const amount2 = amount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+
+    // const amount3 = amount.toLocaleString('us-US', { style: 'currency', currency: 'USD' })
+
     return(
     <div>
       <header className='ei-header'>
@@ -29,14 +33,14 @@ componentDidMount() {
         <div className='ei-who-pl'>
           <span className='who-pl-wrd'>{userPaid} paid
           </span>
-          <span className='who-pl-amt'>{amount}
+          <span className='who-pl-amt' id='money'>{amount2}
           </span>
         </div>
         
         <div className='ei-who-pl2'>
-          <span className='who-pl-wrd'>{userPaid} paid2
+          <span className='who-pl-wrd'>{userPaid} paid
           </span>
-          <span className='who-pl-amt2'>{amount}2
+          <span className='who-pl-amt2' id='money'>{amount2}
           </span>
         </div>
         

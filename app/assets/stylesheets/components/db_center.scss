@@ -93,3 +93,6 @@
   color: $main-green;
   font-size: 15px
 }
+#money::before {
+  content:"$";
+}
