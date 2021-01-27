@@ -39,13 +39,13 @@ class FriendShow extends React.Component {
             />
           </aside>
 
-          <section className='friend-show-center'>
-            <p className='friend-show-header'> 
+          <section className='db-center'>
+            <p className='db-center-header'> 
             friends show page; placeholder text
             </p>
           </section>
           
-          <section className='friend-show-right'>
+          <section className='db-right'>
             <button className='remove-friend-btn' onClick={this.deleteFriend}>
               Remove this friend
             </button>

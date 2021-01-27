@@ -8,12 +8,41 @@ class ExpenseIndexItem extends React.Component {
   }
 
   render() {
+    const { description, author_id, amount } = this.props.expense;
+
+    const whoPaid = this.props.usersIndex[author_id]
+
     return(
     <div>
-      {this.props.expense.id}
+      <header className='ei-header'>
+
+      <div className='ei-header-left'>
+      <img src={window.category_icon} alt="" className='category-icon-small'/>
+      <span className='ei-head-desc'>{description}</span>
+      </div>
+
+      <div className='ei-header-right'>
+        <div className='ei-you-paid'>
+          <span className='you-paid-wrd'>{whoPaid}</span>
+          <span className='you-paid-amt'>{amount}</span>
+        </div>
+        <div className='ei-you-lent'>
+
+        </div>
+      </div>
+      
+      </header>
+      
+      <div className='ei-body'>
+      
+      </div>      
+      
     </div>
   )}
   
 }
+
+{/* <img src={window.category_icon} alt="" className='category-icon'/> */}
+{/* {this.props.expense.id} */}
 
 export default ExpenseIndexItem;

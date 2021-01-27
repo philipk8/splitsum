@@ -1,0 +1,52 @@
+@import "base/colors.scss";
+
+.db-center {
+  border-left: 1px solid $lighter2-grey;
+  border-right: 1px solid $lighter2-grey;
+  width: 560px;
+  // margin-top: 20px;
+  display: flex;
+  // justify-content: center;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.db-center-header {
+  // font-family: Lato;
+  // font-size: 14px;
+  // color: $light-grey
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #eeeeee;
+  height: 45px
+}
+
+.db-header-wrd {
+  font-family: Lato;
+  font-size: 24px;
+  color: #333333;
+  font-weight: 600
+}
+
+.db-add-expense-btn {
+  background-color: $button-orange;
+  color: $text-white;
+  height: 35px;
+  width: 160px;
+  border: 1px solid $lighter2-grey;
+  border-radius: 4px;
+  font-size: 15px
+}
+
+.category-icon-small {
+  height: 30px
+}
+
+.ei-header {
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+}
+

@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
         <section className='db-section-main'>
           
           <aside className='db-left-bar'> 
-            <DashboardLeft 
+            {/* <DashboardLeft 
               fetchFriends={this.props.fetchFriends}
               fetchFriend={this.props.fetchFriend}
               addFriend={this.props.addFriend}
@@ -31,13 +31,13 @@ class Dashboard extends React.Component {
               currentUser={this.props.currentUser}
               friends={this.props.friends}
               usersIndex={this.props.usersIndex}
-            />
+            /> */}
           </aside>
 
           <section className='db-center'>
             
             <div className='db-center-header'>
-              <span className='db-all-expenses'>All expenses</span>
+              <span className='db-header-wrd'>All expenses</span>
               <button className='db-add-expense-btn'>Add an expense</button>
             </div>
 
