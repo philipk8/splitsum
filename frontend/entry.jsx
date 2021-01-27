@@ -14,7 +14,9 @@ import {addFriend, deleteFriend, fetchFriends, fetchFriend} from './actions/frie
 
 import {fetchUsers} from './actions/users_index_actions'
 
-import {addExpense, fetchExpenses, fetchExpense, deleteExpense, updateExpense} from './util/expenses_api_util'
+// import {addExpense, fetchExpenses, fetchExpense, deleteExpense, updateExpense} from './util/expenses_api_util'
+
+import {addExpense, fetchExpenses, fetchExpense, deleteExpense, updateExpense} from './actions/expenses_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
   
