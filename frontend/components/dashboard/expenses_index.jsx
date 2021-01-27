@@ -29,6 +29,7 @@ class ExpensesIndex extends React.Component {
             currentUser={this.props.currentUser}
             friends={this.props.friends}
             usersIndex={this.props.usersIndex}
+            usersIndexObj={this.props.usersIndexObj}
           />
         ))
       }

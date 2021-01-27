@@ -14,7 +14,9 @@ const msp = ({ session, entities: { users, friends, usersIndex, expenses } }) =>
   return {
     currentUser: users[session.id],
     friends: Object.values(friends),
+    // friends: friends,
     usersIndex: Object.values(usersIndex),
+    usersIndexObj: usersIndex,
     expenses: Object.values(expenses)
   };
 };

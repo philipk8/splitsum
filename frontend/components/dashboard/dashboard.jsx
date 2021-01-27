@@ -11,6 +11,11 @@ class Dashboard extends React.Component {
     super(props);
   }
 
+  // componentDidMount() {
+  //   this.props.fetchUsers();
+  // }
+
+
   render() {
     return (
       <div className='db-main'>
@@ -22,7 +27,7 @@ class Dashboard extends React.Component {
         <section className='db-section-main'>
           
           <aside className='db-left-bar'> 
-            {/* <DashboardLeft 
+            <DashboardLeft 
               fetchFriends={this.props.fetchFriends}
               fetchFriend={this.props.fetchFriend}
               addFriend={this.props.addFriend}
@@ -31,7 +36,7 @@ class Dashboard extends React.Component {
               currentUser={this.props.currentUser}
               friends={this.props.friends}
               usersIndex={this.props.usersIndex}
-            /> */}
+            />
           </aside>
 
           <section className='db-center'>
@@ -52,6 +57,7 @@ class Dashboard extends React.Component {
                 currentUser={this.props.currentUser}
                 friends={this.props.friends}
                 expenses={this.props.expenses}usersIndex={this.props.usersIndex}
+                usersIndexObj={this.props.usersIndexObj}
               />
             </div>
 

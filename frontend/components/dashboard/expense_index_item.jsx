@@ -7,10 +7,23 @@ class ExpenseIndexItem extends React.Component {
     // this.deleteFriend = this.deleteFriend.bind(this);
   }
 
+componentDidMount() {
+    // this.props.fetchUsers();
+  }
+
   render() {
     const { description, author_id, amount } = this.props.expense;
 
-    const whoPaid = this.props.usersIndex[author_id]
+    const userPaid = this.props.usersIndexObj[author_id].name
+
+  // debugger
+
+  
+
+
+// debugger
+    // const userPaid = this.props.friends[author_id]
+    // const namePaid = userPaid.name;
 
     return(
     <div>
@@ -23,7 +36,7 @@ class ExpenseIndexItem extends React.Component {
 
       <div className='ei-header-right'>
         <div className='ei-you-paid'>
-          <span className='you-paid-wrd'>{whoPaid}</span>
+          <span className='you-paid-wrd'>{userPaid}</span>
           <span className='you-paid-amt'>{amount}</span>
         </div>
         <div className='ei-you-lent'>
