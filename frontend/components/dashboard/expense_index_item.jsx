@@ -16,15 +16,6 @@ componentDidMount() {
 
     const userPaid = this.props.usersIndexObj[author_id].name
 
-  // debugger
-
-  
-
-
-// debugger
-    // const userPaid = this.props.friends[author_id]
-    // const namePaid = userPaid.name;
-
     return(
     <div>
       <header className='ei-header'>
@@ -35,13 +26,20 @@ componentDidMount() {
       </div>
 
       <div className='ei-header-right'>
-        <div className='ei-you-paid'>
-          <span className='you-paid-wrd'>{userPaid}</span>
-          <span className='you-paid-amt'>{amount}</span>
+        <div className='ei-who-pl'>
+          <span className='who-pl-wrd'>{userPaid} paid
+          </span>
+          <span className='who-pl-amt'>{amount}
+          </span>
         </div>
-        <div className='ei-you-lent'>
-
+        
+        <div className='ei-who-pl2'>
+          <span className='who-pl-wrd'>{userPaid} paid2
+          </span>
+          <span className='who-pl-amt2'>{amount}2
+          </span>
         </div>
+        
       </div>
       
       </header>

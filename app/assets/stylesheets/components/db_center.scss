@@ -20,7 +20,8 @@
   align-items: center;
   padding: 12px;
   background-color: #eeeeee;
-  height: 45px
+  height: 45px;
+  margin-bottom: 20px
 }
 
 .db-header-wrd {
@@ -48,5 +49,47 @@
   display: flex;
   justify-content: space-between;
   height: 58px;
+  align-items: center;
+  font-family: Lato;
+  font-size: 15px
 }
 
+.ei-header-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ei-header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+.ei-who-pl {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 4px;
+}
+.ei-who-pl2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.who-pl-wrd {
+  font-family: Lato;
+  font-size: 11px;
+  color: $lighter2-grey;
+}
+
+.who-pl-amt {
+  color: black;
+  font-size: 15px
+}
+.who-pl-amt2 {
+  color: $main-green;
+  font-size: 15px
+}
