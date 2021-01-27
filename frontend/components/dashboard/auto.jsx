@@ -7,7 +7,7 @@ export default class AutoComplete extends React.Component {
     this.state = {
       inputVal: ''
     };
-    this.selectName = this.selectName.bind(this);
+    this.selectFriend = this.selectFriend.bind(this);
     this.handleInput = this.handleInput.bind(this);
   }
 
@@ -18,13 +18,13 @@ export default class AutoComplete extends React.Component {
   matches() {
     const matches = [];
     if (this.state.inputVal.length === 0) {
-      return this.props.names;
+      return this.props.friends;
     }
 
-    this.props.names.forEach(name => {
-      const sub = name.slice(0, this.state.inputVal.length);
+    this.props.friends.forEach(friend => {
+      const sub = friend.slice(0, this.state.inputVal.length);
       if (sub.toLowerCase() === this.state.inputVal.toLowerCase()) {
-        matches.push(name);
+        matches.push(friend);
       }
     });
 
@@ -35,20 +35,24 @@ export default class AutoComplete extends React.Component {
     return matches;
   }
 
-  selectName(event) {
-    const name = event.currentTarget.innerText;
-    this.setState({inputVal: name});
+  selectFriend(event) {
+  debugger
+    const friend = event.currentTarget.innerText;
+    this.setState({inputVal: friend});
+  debugger
+    this.props.selectFriendProp(friend);
+  debugger
   }
 
   render() {
     const results = this.matches().map((result, i) => {
       return (
-        <li key={i} onClick={this.selectName}>{result}</li>
+        <li key={i} onClick={this.selectFriend}>{result}</li>
+        // <li key={i} onClick={ () => this.props.selectFriendProp(result)}>{result}</li>
       );
     });
     return(
       <div>
-        <h1>Autocomplete</h1>
         <div className='auto'>
           <input
             onChange={this.handleInput}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import AutoComplete from './auto'
 
 class AddExpenseForm extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class AddExpenseForm extends React.Component {
       paid_by_id: '', 
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.selectedFriend = this.selectedFriend.bind(this);
   }
 
   update(field) {
@@ -29,28 +31,41 @@ class AddExpenseForm extends React.Component {
     this.props.processForm(user).then(this.props.closeModal);
   }
 
-  render() {
-    const results = this.matches().map((result, i) => {
-      return (
-        <li key={i} onClick={this.selectName}>{result}</li>
-      );
-    });
 
+  selectedFriend(friendName) {
+    let currArr = this.state.friends_arr;
+    this.props.friends.forEach( friend => {
+      if (friend.name == friendName) {
+        currArr.push(friend.id)
+      }
+    })
+    this.setState({friends_arr: currArr})
+  }
+
+  render() {
+
+    const autoFriendArr = this.props.friends.map( (friend) => friend.name )
     return (
 
       <div className="addex-form">
         <form onSubmit={this.handleSubmit} className="addex-form">
           
           <header className="addex-head">
-            <span>Add expense</span>
+            <span>Add an expense</span>
             <div onClick={this.props.closeModal} className="close-x">X</div>
           </header>
         
           <div className='addex-friends'>
+            <div className='friends-wrd'>
             With
-            <span id='bold'>you</span>
-            and:
-            <AutoComplete friends={this.props.friends} />
+            <span id='bold'> you </span>
+            and: 
+            </div>
+            
+            <AutoComplete 
+            friends={autoFriendArr}
+            selectFriendProp={this.selectedFriend}
+            />
           </div>
 
           <div className='addex-details-1'>
