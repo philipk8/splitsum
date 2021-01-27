@@ -88,6 +88,14 @@ class Api::ExpensesController < ApplicationController
 
     paid_by_id = params[:expense][:paid_by_id]
 
+    curr_groups = ExpenseGroup.where(expense_id: params[:id])
+
+debugger
+    curr_groups.each do |expense|
+debugger
+      expense.destroy
+    end
+
     payees_arr.each do |payee_id|
       ExpenseGroup.create(expense_id: expense_id, split_with_id: payee_id, paid_by_id: paid_by_id)
     end

@@ -14,7 +14,7 @@ import {addFriend, deleteFriend, fetchFriends, fetchFriend} from './actions/frie
 
 import {fetchUsers} from './actions/users_index_actions'
 
-import {addExpense, fetchExpenses, fetchExpense} from './util/expenses_api_util'
+import {addExpense, fetchExpenses, fetchExpense, deleteExpense, updateExpense} from './util/expenses_api_util'
 
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addExpense = addExpense;
   window.fetchExpenses = fetchExpenses;
   window.fetchExpense = fetchExpense;
+  window.deleteExpense = deleteExpense;
+  window.updateExpense = updateExpense;
 
   window.addFriend = addFriend;
   window.deleteFriend = deleteFriend;
