@@ -90,9 +90,9 @@ class Api::ExpensesController < ApplicationController
 
     curr_groups = ExpenseGroup.where(expense_id: params[:id])
 
-debugger
+# debugger
     curr_groups.each do |expense|
-debugger
+# debugger
       expense.destroy
     end
 
