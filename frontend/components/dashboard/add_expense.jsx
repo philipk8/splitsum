@@ -58,7 +58,7 @@ class AddExpenseForm extends React.Component {
           <div className='addex-friends'>
             <div className='friends-wrd'>
             With
-            <span id='bold'> you </span>
+            <span id='font-bold'> you </span>
             and: 
             </div>
             
@@ -66,6 +66,8 @@ class AddExpenseForm extends React.Component {
             friends={autoFriendArr}
             selectFriendProp={this.selectedFriend}
             />
+
+          
           </div>
 
           <div className='addex-details-1'>

@@ -36,29 +36,34 @@ export default class AutoComplete extends React.Component {
   }
 
   selectFriend(event) {
-  debugger
     const friend = event.currentTarget.innerText;
     this.setState({inputVal: friend});
-  debugger
     this.props.selectFriendProp(friend);
-  debugger
   }
 
   render() {
+
+    const friends_list_flag = this.state.inputVal.length > 0 ? 'show-friends-list' : 'dont-show-friends-list'
+
     const results = this.matches().map((result, i) => {
       return (
-        <li key={i} onClick={this.selectFriend}>{result}</li>
+        <ul>
+        <li key={i} onClick={this.selectFriend} className='ae-friend'>{result}</li>
+        </ul>
         // <li key={i} onClick={ () => this.props.selectFriendProp(result)}>{result}</li>
       );
     });
     return(
       <div>
-        <div className='auto'>
-          <input
+        <div className='ae-friend-main'>
+          <input className='ae-friend-search'
             onChange={this.handleInput}
             value={this.state.inputVal}
-            placeholder='Search...'/>
-            {results}
+            placeholder='Search...'
+          />
+          <div className={friends_list_flag}>
+          {results}
+          </div>
           {/* <ul>
             <ReactCSSTransitionGroup
               transitionName='auto'
@@ -67,6 +72,7 @@ export default class AutoComplete extends React.Component {
               {results}
             </ReactCSSTransitionGroup>  
           </ul> */}
+
         </div>
       </div>
     );

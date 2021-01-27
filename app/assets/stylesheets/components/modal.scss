@@ -37,9 +37,40 @@
 }
 
 .addex-friends {
+  display:flex;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+  height: 46px;
+  font-family: Lato;
   
 }
 
 .category-icon-medium {
   width: 64px;
 }
+
+.ae-friend-search {
+  background-color: $lighter2-grey;
+  // position: absolute;
+  // top: 50px;
+}
+
+.dont-show-friends-list {
+  visibility: hidden;
+}
+
+.show-friends-list {
+  background-color: white;
+  color: $headertext-grey;
+  position: absolute;
+  // top: 50px;
+  z-index: 9;
+  height: 50px;
+  font-family: Lato;
+}
+
+.ae-friend {
+  cursor: pointer;
+  // border: 1px solid blue;
+}
+
