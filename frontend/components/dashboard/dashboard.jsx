@@ -24,7 +24,12 @@ class Dashboard extends React.Component {
     const total_balance = this.props.currentUser.total_balance
     const you_owe = this.props.currentUser.you_owe
     const you_are_owed = this.props.currentUser.you_are_owed
+
+    const total_balance1 = total_balance.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+    const you_owe1 = you_owe.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+    const you_are_owed1 = you_are_owed.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
   //  debugger 
+
     return (
       <div className='db-main'>
 
@@ -58,15 +63,15 @@ class Dashboard extends React.Component {
             <div className='user-summary-1'>
               <div className='us-1-left'>
                 <span>total balance</span>
-                <p id='money'>{total_balance}</p>
+                <p id='money'>{total_balance1}</p>
               </div>
               <div className='us-1-middle'>
                 <span>you owe</span>
-                <p id='money'>{you_owe}</p>
+                <p id='money'>{you_owe1}</p>
               </div>
               <div className='us-1-right'>
                 <span>you are owed</span>
-                <p id='money'>{you_are_owed}</p>
+                <p id='money'>{you_are_owed1}</p>
               </div>
             </div>
             <div className='user-summary-2'>
