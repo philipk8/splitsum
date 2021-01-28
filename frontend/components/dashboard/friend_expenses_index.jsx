@@ -27,26 +27,26 @@ class FriendExpensesIndex extends React.Component {
       const expensesconst = this.props.expenses
       // const expenseexample = this.props.expenses[30]
       expensesconst.forEach ( (expense) => {
-        debugger
-        let friend_id  = friendconst["id"]
-        debugger
-        let friend_split = expense["split"]
-        debugger
+        // debugger
+        // let friend_id  = friendconst["id"]
+        // debugger
+        // let friend_split = expense["split"]
+        // debugger
         if (expense["split"][friendconst["id"]] !== undefined ) {
-        debugger
-          expensesArr.push(expense["id"])
-        debugger
+        // debugger
+          expensesArr.push(expense)
+        // debugger
         }
       })
     }
 
-  
-    debugger
+    expensesArr 
+    // debugger
 
     return(
     <ul>
       {
-        this.props.expenses.map((expense) => (
+        expensesArr.map((expense) => (
           <ExpenseIndexItem
             key={expense.id}
             expense={expense}
