@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, Switch, Route, Redirect, HashRouter } from 'react-router-dom';
 import DashboardHeader from './dashboard_header';
 import DashboardLeft from './dashboard_left';
-import ExpensesIndex from './expenses_index'
+import ExpensesIndex from './expenses_index';
+import Modal from './modal';
 
 class AllExpenses extends React.Component {
   constructor(props) {

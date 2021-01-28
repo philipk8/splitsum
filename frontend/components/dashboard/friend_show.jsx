@@ -54,6 +54,7 @@ class FriendShow extends React.Component {
               {/* <span className='db-header-wrd'>{this.props.friend.name}</span> */}
               
               {/* <button className='db-add-expense-btn'>Add an expense</button> */}
+              <span className='db-header-wrd'>{this.props.friend.name}</span>
               {this.props.addExpenseForm}
               {/* {this.props.otherForm} */}
             </div>

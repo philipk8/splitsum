@@ -20,7 +20,11 @@ class Dashboard extends React.Component {
 
 
   render() {
-    debugger
+  // debugger
+    const total_balance = this.props.currentUser.total_balance
+    const you_owe = this.props.currentUser.you_owe
+    const you_are_owed = this.props.currentUser.you_are_owed
+  //  debugger 
     return (
       <div className='db-main'>
 
@@ -49,23 +53,25 @@ class Dashboard extends React.Component {
               <span className='db-header-wrd'>Dashboard</span>
               {this.props.addExpenseForm}
             </div>
-{/* 
-          <div className='db-expenses-index'>
-              <ExpensesIndex
-                fetchExpenses={this.props.fetchExpenses}
-                fetchExpense={this.props.fetchExpense}
-                addExpense={this.props.addExpense}
-                updateExpense={this.props.updateExpense}
-                deleteExpense={this.props.deleteExpense}
 
-                currentUser={this.props.currentUser}
-                friends={this.props.friends}
-                expenses={this.props.expenses}
-                usersIndex={this.props.usersIndex}
-                usersIndexObj={this.props.usersIndexObj}
-              />
-          </div> */}
 
+            <div className='user-summary-1'>
+              <div className='us-1-left'>
+                <span>total balance</span>
+                <p id='money'>{total_balance}</p>
+              </div>
+              <div className='us-1-middle'>
+                <span>you owe</span>
+                <p id='money'>{you_owe}</p>
+              </div>
+              <div className='us-1-right'>
+                <span>you are owed</span>
+                <p id='money'>{you_are_owed}</p>
+              </div>
+            </div>
+            <div className='user-summary-2'>
+
+            </div>
           </section>
 
         </section>

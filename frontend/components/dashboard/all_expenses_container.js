@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import AllExpenses from './all_expenses'
 
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const msp = ({ session, entities: { users, friends, usersIndex, expenses } }, ownProps) => {
   return({

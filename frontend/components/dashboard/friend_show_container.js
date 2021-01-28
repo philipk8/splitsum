@@ -3,6 +3,8 @@ import React from 'react';
 import FriendShow from './friend_show';
 
 
+import { openModal, closeModal } from '../../actions/modal_actions';
+
 const msp = ({ session, entities: { users, friends, usersIndex, expenses } }, ownProps) => {
   return({
     currentUser: users[session.id],
