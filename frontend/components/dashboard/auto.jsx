@@ -48,7 +48,7 @@ export default class AutoComplete extends React.Component {
     const results = this.matches().map((result, i) => {
       return (
         <ul>
-        <li key={i} onClick={this.selectFriend} className='ae-friend'>{result}</li>
+        <li key={`friend-${i}`} onClick={this.selectFriend} className='ae-friend'>{result}</li>
         </ul>
         // <li key={i} onClick={ () => this.props.selectFriendProp(result)}>{result}</li>
       );

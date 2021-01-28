@@ -33,6 +33,8 @@ const mdp = dispatch => {
     fetchFriends: (user_id) => dispatch(fetchFriends(user_id)),
     fetchFriend: (friend) => dispatch(fetchFriend(friend)),
 
+    fetchUsers: () => dispatch(fetchUsers()),
+
   };
 };
 

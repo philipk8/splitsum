@@ -7,9 +7,12 @@ class ExpenseIndexItem extends React.Component {
     // this.deleteFriend = this.deleteFriend.bind(this);
   }
 
-componentDidMount() {
-    // this.props.fetchUsers();
-  }
+// componentDidMount() {
+//     this.props.fetchUsers();
+//   }
+// componentWillMount() {
+//     this.props.fetchUsers();
+//   }
 
   render() {
     const { description, author_id, amount } = this.props.expense;

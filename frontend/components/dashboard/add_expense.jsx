@@ -27,8 +27,8 @@ class AddExpenseForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    const expense = Object.assign({}, this.state);
+    this.props.processForm(expense).then(this.props.closeModal);
   }
 
 
@@ -46,7 +46,11 @@ class AddExpenseForm extends React.Component {
 
     const autoFriendArr = this.props.friends.map( (friend) => friend.name )
 
-    const categories = ['General', 'Rent', 'Utilities', 'Food and drink', 'Transportation']
+    const perPerson = this.state.amount / (this.state.friends_arr.length + 1)
+    
+    const perPerson2 = perPerson.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+    
+
 
     return (
 
@@ -131,15 +135,27 @@ class AddExpenseForm extends React.Component {
             <div className='details-2-top'>
             Paid by 
             <div className='addex-paidby'>
-            
+            <select className='paidby-selector' onChange={this.update('paid_by_id')} value={this.state.paid_by_id}>
+              <option value={this.props.currentUser.id}>you</option>
+            {
+              this.state.friends_arr.map( (friend_id, i) => 
+              <option value={friend_id} key={`friend_id-${i}`}>
+                 {this.props.usersIndexObj[friend_id].name}  
+              </option>
+              )
+            }
+            </select>
             </div>
             and split equally.
             </div>
             <div className='details-2-middle'>
               {/* per person calculation */}
-              ($3.33/person)
+              ($
+              {perPerson2}
+              /person)
             </div>
             <div className='details-2-bottom'>
+              Notes:
               <input type="text"
                 value={this.state.notes}
                 onChange={this.update('notes')}

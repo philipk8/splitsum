@@ -48,7 +48,7 @@ class Dashboard extends React.Component {
             <div className='db-center-header'>
               <span className='db-header-wrd'>All expenses</span>
               {/* <button className='db-add-expense-btn'>Add an expense</button> */}
-              {this.props.addExpenseForm}
+              {this.props.otherForm}
             </div>
 
             <div className='db-expenses-index'>
