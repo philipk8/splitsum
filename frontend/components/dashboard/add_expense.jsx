@@ -8,7 +8,7 @@ class AddExpenseForm extends React.Component {
     super(props);
     this.state = {
       author_id: '',
-      category: '',
+      category: 'General',
       description: '',
       amount: '',
       notes: '',
@@ -45,6 +45,9 @@ class AddExpenseForm extends React.Component {
   render() {
 
     const autoFriendArr = this.props.friends.map( (friend) => friend.name )
+
+    const categories = ['General', 'Rent', 'Utilities', 'Food and drink', 'Transportation']
+
     return (
 
       <div className="addex-form">
@@ -67,30 +70,68 @@ class AddExpenseForm extends React.Component {
             selectFriendProp={this.selectedFriend}
             />
 
+            <div className='addex-friends-added'>
+            <span className='added-friends-wrd'>Friends added:</span>
+            {
+              this.state.friends_arr.map( (friend_id, i) =>
+              <ul>
+              <li key={`friend_id-${i}`}>
+                {this.props.usersIndexObj[friend_id].name}  
+              </li>
+              </ul>
+              
+              )
+            }
+            </div>
+
           
           </div>
 
           <div className='addex-details-1'>
+            
+            <div className='details-1-left'>
+            
             <img src={window.category_icon} alt="" className='category-icon-medium'/>
+            
+            <div className='categories-list'>
+            <select className='categories-selector' onChange={this.update('category')} value={this.state.category}>
+            
+            <option value="General">General</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Food and Drink">Food and Drink</option>
+            <option value="Rent">Rent</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Entertainment">Entertainment</option>
+            
+            </select>
+            </div>
+            </div>
+
+            <div className='details-1-right'>
+
             <div className='addex-desc-amt'>
+                <span>Enter a description</span>
                 <input type="text"
                 value={this.state.description}
                 onChange={this.update('description')}
                 className="addex-desc"
                 />
+                <span>$</span>
                 <input type="text"
                 value={this.state.amount}
                 onChange={this.update('amount')}
                 className="addex-amt"
                 />
             </div>
-          </div>
+
+            </div>
+            </div>
 
           <div className='addex-details-2'>
             <div className='details-2-top'>
             Paid by 
             <div className='addex-paidby'>
-            {/* selection of friends */}
+            
             </div>
             and split equally.
             </div>
