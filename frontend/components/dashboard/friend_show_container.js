@@ -3,12 +3,13 @@ import React from 'react';
 import FriendShow from './friend_show';
 
 
-const msp = ({ session, entities: { users, friends, usersIndex } }, ownProps) => {
+const msp = ({ session, entities: { users, friends, usersIndex, expenses } }, ownProps) => {
   return({
     currentUser: users[session.id],
     friends: Object.values(friends),
     usersIndex: Object.values(usersIndex),
-    friend: friends[ownProps.match.params.friendId]
+    friend: friends[ownProps.match.params.friendId],
+    expenses: Object.values(expenses)
   })
 }
 
@@ -30,6 +31,16 @@ const mdp = dispatch => {
       </button>
     ),
   closeModal: () => dispatch(closeModal()),
+
+
+  fetchExpenses: () => dispatch(fetchExpenses()),
+  fetchExpense: (expense) => dispatch(fetchExpense(expense)),
+  addExpense: (expense) => dispatch(addExpense(expense)),
+  deleteExpense: (expenseId) => dispatch(deleteExpense(expenseId)),
+  updateExpense: (expense) => dispatch(deleteExpense(expense)),
+
+  logout: () => dispatch(logout()),
+
 
 
   })

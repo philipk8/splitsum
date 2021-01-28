@@ -16,7 +16,7 @@ class ExpenseIndexItem extends React.Component {
 
   render() {
 
-    const { description, author_id, amount, paid_by_id, split } = this.props.expense;
+    const { description, author_id, amount, paid_by_id, split,category, notes } = this.props.expense;
 
     // const userPaid2 = this.props.usersIndexObj[author_id].name
 debugger
@@ -42,14 +42,54 @@ debugger
 
     const numPayees = Object.values(split).length
 // debugger 
-    const eachShare = (amount / numPayees) 
+    let eachShare = (amount / numPayees) 
     const amtLent = eachShare * (numPayees - 1 ) 
 
     const amount3 = amtLent.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
 
-    const splitArr = Object.values(split)
+    const splitArr = Object.keys(split)
+    const splitArr2 = splitArr.filter(ele => ele != paid_by_id)
 
+    let payee1 =''
+    let payee1Id = splitArr2[0]
+    this.props.usersIndex.forEach( user => {
+      if (user.id == payee1Id) {
+        payee1 = user.name;
+        }
+    })
 
+    const payee1Amt = split[payee1Id]
+    
+    let payee2 =''
+    let payee2Id = splitArr2[1]
+    this.props.usersIndex.forEach( user => {
+      if (user.id == payee2Id) {
+        payee2 = user.name;
+        }
+    })
+
+    payee1 = payee1 + ' owes'
+
+    if (payee2 == '') {
+      payee2 == ''
+    } else {
+      payee2 = payee2 + ' owes'
+    }
+
+    eachShare = eachShare.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+
+    const payee2Amt = split[payee2Id]
+
+    const amount4 = payee1Amt.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+
+    let amount5 =''
+
+    if (payee2Amt) {
+     amount5 = payee2Amt.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+    }
+
+debugger
+    // const userName = this.props.usersIndexObj[94].name
 
     // let lentWho = ''
     // if (numPayees > 2) {
@@ -113,7 +153,7 @@ debugger
           <div className='ei-b-left'>
             <ul>
               <li>
-                <img src={window.user_icon} alt="" className='ei-user-icon'/>
+                {/* <img src={window.user_icon} alt="" className='ei-user-icon'/> */}
               {userPaid} paid {amount2} and owes {eachShare}
               </li>
               {/* {
@@ -125,23 +165,44 @@ debugger
                 }
               })
               } */}
-              {
+              {/* {
               splitArr.forEach( (payee_id) => {
-                if (payee_id !== paid_by_id) {
+                debugger
+                if (payee_id == paid_by_id) {
+                  debugger
+                  } else
                     {
                     this.props.usersIndex.forEach( user => {
                     if (user.id == payee_id) {
-                    <li>{user.name}</li>
+                      debugger
+                    // return <li>{user.name}</li>
+                    let user1 = user.name
                         }
                     })
                     }  
-                }
+                
               })
-              }
+              } */}
+              <li>
+                {/* <img src={window.user_icon} alt="" className='ei-user-icon'/> */}
+                {payee1} {amount4}
+              </li>
+              <li>
+                {/* <img src={window.user_icon} alt="" className='ei-user-icon'/> */}
+                {payee2} {amount5}
+                
+              </li>
             </ul>
           </div>
           <div className='ei-b-right'>
-
+              <div className='ei-b-right-category'>
+                  Category: {category}
+              </div>
+              <div className='ei-b-right-notes'>
+                  <span>Notes:</span> 
+                  <br/>
+                  <span>{notes}</span>
+              </div>
           </div>
       </div>      
       

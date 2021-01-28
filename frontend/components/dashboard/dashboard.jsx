@@ -14,11 +14,13 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
+    // debugger
     this.props.fetchUsers();
   }
 
 
   render() {
+    debugger
     return (
       <div className='db-main'>
 
