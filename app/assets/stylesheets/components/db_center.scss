@@ -45,6 +45,10 @@
   height: 30px
 }
 
+.ei-root {
+  font-family: Lato; 
+}
+
 .ei-header {
   display: flex;
   justify-content: space-between;
@@ -134,4 +138,8 @@
   font-size: 13px;
   width: 80;
   border: none
+}
+
+.ei-user-icon {
+  height: 40px;
 }

@@ -45,6 +45,8 @@ class ExpenseIndexItem extends React.Component {
 
     const amount3 = amtLent.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
 
+    const splitArr = Object.values(split)
+
     // let lentWho = ''
     // if (numPayees > 2) {
     //   lentWho = ''
@@ -56,7 +58,7 @@ class ExpenseIndexItem extends React.Component {
     // const amount3 = amount.toLocaleString('us-US', { style: 'currency', currency: 'USD' })
 
     return(
-    <div>
+    <div className='ei-root'>
       <header className='ei-header'>
 
       <div className='ei-header-left'>
@@ -105,6 +107,13 @@ class ExpenseIndexItem extends React.Component {
                 <img src={window.user_icon} alt="" className='ei-user-icon'/>
               {userPaid} paid {amount2} and owes {eachShare}
               </li>
+              {
+              splitArr.forEach( (payee_id) => {
+                if (payee_id !== paid_by_id) {
+                  <li>{this.props.usersIndexObj[payee_id].name}</li>
+                }
+              })
+              }
             </ul>
           </div>
           <div className='ei-b-right'>
