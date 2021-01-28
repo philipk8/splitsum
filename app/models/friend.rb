@@ -10,6 +10,8 @@ class Friend < ApplicationRecord
   foreign_key: :user_id,
   class_name: :User
 
+
+
   # has_many :friends,
   # foreign
 
@@ -23,5 +25,12 @@ class Friend < ApplicationRecord
   #   return found_friend.as_json
   # end
 
+  # def owe_user 
+  #   debugger
+  #   paid_expenses = current_user.paid_expenses
+  #   debugger
+  #   paid_expenses_friend = paid_expenses.where(split_by_id = self.id)
+  #   debugger
+  # end
 
 end

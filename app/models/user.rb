@@ -136,8 +136,9 @@ class User < ApplicationRecord
 
   end
 
-  
+   
 
+  
   # FIPA GERV
 
   def self.find_by_credentials(email, password)
