@@ -44,10 +44,10 @@ class Dashboard extends React.Component {
           <section className='db-center'>
             
             <div className='db-center-header'>
-              <span className='db-header-wrd'>All expenses</span>
+              <span className='db-header-wrd'>Dashboard</span>
               {this.props.addExpenseForm}
             </div>
-            
+{/* 
           <div className='db-expenses-index'>
               <ExpensesIndex
                 fetchExpenses={this.props.fetchExpenses}
@@ -62,7 +62,7 @@ class Dashboard extends React.Component {
                 usersIndex={this.props.usersIndex}
                 usersIndexObj={this.props.usersIndexObj}
               />
-          </div>
+          </div> */}
 
           </section>
 

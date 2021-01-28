@@ -96,3 +96,42 @@
 #money::before {
   content:"$";
 }
+
+.ei-middle {
+  background-color: $lightest-grey;
+  padding: 4px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  font-family: Lato;
+  height: 115px;
+  align-items: center;
+}
+
+.category-icon-medium {
+  height: 65px
+}
+
+.ei-middle-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+.ei-m-c-amt {
+  font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.ei-m-c-author {
+  font-size: 12px;
+  color: $lighter-grey
+}
+
+.ei-m-c-btn {
+  background-color: $button-orange;
+  color: $text-white;
+  font-size: 13px;
+  width: 80;
+  border: none
+}

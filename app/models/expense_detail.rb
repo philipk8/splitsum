@@ -24,26 +24,24 @@ class ExpenseDetail < ApplicationRecord
   end
 
   def calc_split
-
-  
     expense_group = self.expense_groups
-
     amount = self.amount * 1.00
-
     num = expense_group.count()
-
     each_pay = amount / num * 1.00
-
     hash = {}
-
     expense_group.each do |expense_line|
-  
       hash[expense_line.split_with_id] = each_pay 
-
     end
 
     return hash
   end
+
+  def paid_by_id 
+    expense_group = self.expense_groups
+    return expense_group.first.paid_by_id
+  end
+
+
 
 
 

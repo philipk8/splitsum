@@ -64,6 +64,9 @@ class Api::ExpensesController < ApplicationController
       split_hash = expense_detail.calc_split
       expense_hash[:split] = split_hash
 
+      paid_by_id = expense_detail.paid_by_id
+      expense_hash[:paid_by_id] = paid_by_id
+      
       @hash[expense_detail.id] = expense_hash
       # hash[expense_detail.id][split] = split_hash
     end
