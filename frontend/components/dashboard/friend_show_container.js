@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-
-import FriendShow from './friend_show'
+import React from 'react';
+import FriendShow from './friend_show';
 
 
 const msp = ({ session, entities: { users, friends, usersIndex } }, ownProps) => {
@@ -22,7 +22,16 @@ const mdp = dispatch => {
     
     deleteFriend: (friend) => dispatch(deleteFriend(friend)),
 
-    fetchUsers: () => dispatch(fetchUsers())
+    fetchUsers: () => dispatch(fetchUsers()),
+
+    addExpenseForm: (
+      <button className='db-add-expense-btn' onClick={() => dispatch(openModal('addexpense'))}>
+        Add an expense
+      </button>
+    ),
+  closeModal: () => dispatch(closeModal()),
+
+
   })
 }
 

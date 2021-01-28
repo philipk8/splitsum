@@ -1,21 +1,14 @@
 import React from 'react';
 import { Link, Switch, Route, Redirect, HashRouter } from 'react-router-dom';
 import DashboardHeader from './dashboard_header';
-import DashboardLeft from './dashboard_left'
+import DashboardLeft from './dashboard_left';
+import ExpensesIndex from './expenses_index'
 
-class FriendShow extends React.Component {
+class AllExpenses extends React.Component {
   constructor(props) {
     super(props);
-    this.deleteFriend = this.deleteFriend.bind(this);
   }
 
-  deleteFriend() {
-    const user_id = this.props.currentUser.id
-    const friend_id = this.props.friend.id
-    const friend = {user_id: user_id, friend_id: friend_id}
-    this.props.deleteFriend(friend);
-    this.props.fetchFriends(user_id).then(() => this.props.history.push("/dashboard"))
-  }
 
   render() {
     return (
@@ -40,18 +33,31 @@ class FriendShow extends React.Component {
           </aside>
 
           <section className='db-center'>
-            <div className='db-center-header'>
+              <div className='db-center-header'>
               <span className='db-header-wrd'>All expenses</span>
-              {/* <button className='db-add-expense-btn'>Add an expense</button> */}
               {this.props.addExpenseForm}
-              {/* {this.props.otherForm} */}
-            </div>
-          </section>
+              </div>
           
+          
+          <div className='db-expenses-index'>
+              <ExpensesIndex
+                fetchExpenses={this.props.fetchExpenses}
+                fetchExpense={this.props.fetchExpense}
+                addExpense={this.props.addExpense}
+                updateExpense={this.props.updateExpense}
+                deleteExpense={this.props.deleteExpense}
+
+                currentUser={this.props.currentUser}
+                friends={this.props.friends}
+                expenses={this.props.expenses}
+                usersIndex={this.props.usersIndex}
+                usersIndexObj={this.props.usersIndexObj}
+              />
+          </div>
+
+          </section>
+
           <section className='db-right'>
-            <button className='remove-friend-btn' onClick={this.deleteFriend}>
-              Remove this friend
-            </button>
             <br/>
             <p className='right-your-balance'> 
             Your Balance
@@ -70,4 +76,4 @@ class FriendShow extends React.Component {
 
 }
 
-export default FriendShow;
+export default AllExpenses;

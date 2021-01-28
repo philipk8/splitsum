@@ -16,6 +16,8 @@ import SplashPage from './splash/splash_page'
 
 import FriendShowContainer from './dashboard/friend_show_container'
 
+import AllExpensesContainer from './dashboard/all_expenses_container'
+
 import Modal from './dashboard/modal'
 
 const App = () => (
@@ -29,7 +31,11 @@ const App = () => (
       <AuthRoute exact path="/" component={SplashPage} />
       <ProtectedRoute exact path="/dashboard" component={DashBoardContainer} />
       
+      <Route exact path="/all" component={AllExpensesContainer} />
+      
       <Route path="/friends/:friendId" component={FriendShowContainer} />
+
+
 
     </Switch>
   </div>

@@ -1,13 +1,13 @@
 class Api::ExpensesController < ApplicationController
 
   def create
-debugger
+# debugger
     @expense = ExpenseDetail.create(expense_params)
-debugger
+# debugger
     expense_id = @expense.id
-debugger
+# debugger
     payees_arr = params[:expense][:friends_arr]
-debugger
+# debugger
     payees_arr << current_user.id
 
     paid_by_id = params[:expense][:paid_by_id]

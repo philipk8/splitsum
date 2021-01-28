@@ -28,6 +28,7 @@ class AddExpenseForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const expense = Object.assign({}, this.state);
+  // debugger
     this.props.processForm(expense).then(this.props.closeModal);
   }
 
@@ -156,7 +157,7 @@ class AddExpenseForm extends React.Component {
             </div>
             <div className='details-2-bottom'>
               Notes:
-              <input type="text"
+              <textarea
                 value={this.state.notes}
                 onChange={this.update('notes')}
                 className="addex-notes"

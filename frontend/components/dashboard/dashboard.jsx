@@ -22,8 +22,6 @@ class Dashboard extends React.Component {
     return (
       <div className='db-main'>
 
-        {/* <Modal /> */}
-        
         <header className='db-header'>
             <DashboardHeader logout={this.props.logout} currentUser={this.props.currentUser}/>
         </header>
@@ -47,12 +45,10 @@ class Dashboard extends React.Component {
             
             <div className='db-center-header'>
               <span className='db-header-wrd'>All expenses</span>
-              {/* <button className='db-add-expense-btn'>Add an expense</button> */}
               {this.props.addExpenseForm}
-              {/* {this.props.otherForm} */}
             </div>
-
-            <div className='db-expenses-index'>
+            
+          <div className='db-expenses-index'>
               <ExpensesIndex
                 fetchExpenses={this.props.fetchExpenses}
                 fetchExpense={this.props.fetchExpense}
@@ -62,10 +58,11 @@ class Dashboard extends React.Component {
 
                 currentUser={this.props.currentUser}
                 friends={this.props.friends}
-                expenses={this.props.expenses}usersIndex={this.props.usersIndex}
+                expenses={this.props.expenses}
+                usersIndex={this.props.usersIndex}
                 usersIndexObj={this.props.usersIndexObj}
               />
-            </div>
+          </div>
 
           </section>
 
