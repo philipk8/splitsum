@@ -49,7 +49,11 @@ class User < ApplicationRecord
       sum += expense_amount
     end
 
+    if total_records == 0 
+      each_share = 0 
+    else 
     each_share = sum / total_records
+    end
 
     # debugger
     
@@ -84,7 +88,11 @@ class User < ApplicationRecord
       sum += expense_amount
     end
 
+    if expense_group_rows == 0 
+      each_share = 0
+    else
     each_share = sum / expense_group_rows
+    end
 
     
     owed_by_you = each_share * liable_split_num
