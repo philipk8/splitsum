@@ -21,6 +21,8 @@ class ExpensesIndex extends React.Component {
             key={expense.id}
             expense={expense}
 
+            
+
             fetchExpense={this.props.fetchExpense}
             addExpense={this.props.addExpense}
             updateExpense={this.props.updateExpense}

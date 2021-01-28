@@ -52,6 +52,7 @@ class AllExpenses extends React.Component {
                 expenses={this.props.expenses}
                 usersIndex={this.props.usersIndex}
                 usersIndexObj={this.props.usersIndexObj}
+
               />
           </div>
 

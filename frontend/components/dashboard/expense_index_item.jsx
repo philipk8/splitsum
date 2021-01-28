@@ -4,7 +4,7 @@ import { Link, Switch, Route, Redirect, HashRouter } from 'react-router-dom';
 class ExpenseIndexItem extends React.Component {
   constructor(props) {
     super(props);
-    // this.deleteFriend = this.deleteFriend.bind(this);
+    // this.fetchUsers = this.fetchUsers.bind(this);
   }
 
 // componentDidMount() {
@@ -15,10 +15,11 @@ class ExpenseIndexItem extends React.Component {
 //   }
 
   render() {
+
     const { description, author_id, amount, paid_by_id, split } = this.props.expense;
 
-    // const userPaid = this.props.usersIndexObj[author_id].name
-
+    // const userPaid2 = this.props.usersIndexObj[author_id].name
+debugger
     let userPaid = ''
     let userLent = ''
     this.props.usersIndex.forEach( user => {
@@ -28,6 +29,7 @@ class ExpenseIndexItem extends React.Component {
         userPaid = 'you';
       }
     })
+  debugger
 
     let authorName = ''
     this.props.usersIndex.forEach( user => {
@@ -47,6 +49,8 @@ class ExpenseIndexItem extends React.Component {
 
     const splitArr = Object.values(split)
 
+
+
     // let lentWho = ''
     // if (numPayees > 2) {
     //   lentWho = ''
@@ -57,6 +61,11 @@ class ExpenseIndexItem extends React.Component {
 
     // const amount3 = amount.toLocaleString('us-US', { style: 'currency', currency: 'USD' })
 
+    // if (!this.props.usersIndex) {
+    //   return (
+    //     <div>Loading...</div>
+    //   )}
+    //     else { 
     return(
     <div className='ei-root'>
       <header className='ei-header'>
@@ -107,10 +116,25 @@ class ExpenseIndexItem extends React.Component {
                 <img src={window.user_icon} alt="" className='ei-user-icon'/>
               {userPaid} paid {amount2} and owes {eachShare}
               </li>
+              {/* {
+              splitArr.forEach( (payee_id) => {
+                debugger  
+                if (payee_id !== paid_by_id) {
+                  debugger
+                  <li>{this.props.usersIndexObj[payee_id].name}</li>
+                }
+              })
+              } */}
               {
               splitArr.forEach( (payee_id) => {
                 if (payee_id !== paid_by_id) {
-                  <li>{this.props.usersIndexObj[payee_id].name}</li>
+                    {
+                    this.props.usersIndex.forEach( user => {
+                    if (user.id == payee_id) {
+                    <li>{user.name}</li>
+                        }
+                    })
+                    }  
                 }
               })
               }
@@ -122,11 +146,12 @@ class ExpenseIndexItem extends React.Component {
       </div>      
       
     </div>
-  )}
-  
+  )
+            
+            }
 }
 
-{/* <img src={window.category_icon} alt="" className='category-icon'/> */}
-{/* {this.props.expense.id} */}
+// {/* <img src={window.category_icon} alt="" className='category-icon'/> */}
+// {/* {this.props.expense.id} */}
 
 export default ExpenseIndexItem;

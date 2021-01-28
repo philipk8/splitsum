@@ -31,7 +31,7 @@ const App = () => (
       <AuthRoute exact path="/" component={SplashPage} />
       <ProtectedRoute exact path="/dashboard" component={DashBoardContainer} />
       
-      <Route path="/all" component={AllExpensesContainer} />
+      <Route exact path="/all" component={AllExpensesContainer} />
 
       <Route path="/friends/:friendId" component={FriendShowContainer} />
 
