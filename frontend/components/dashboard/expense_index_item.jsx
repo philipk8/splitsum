@@ -17,7 +17,14 @@ class ExpenseIndexItem extends React.Component {
   render() {
     const { description, author_id, amount } = this.props.expense;
 
-    const userPaid = this.props.usersIndexObj[author_id].name
+    // const userPaid = this.props.usersIndexObj[author_id].name
+
+    let userPaid = ''
+    this.props.usersIndex.forEach( user => {
+      if (user.id == author_id) {
+        userPaid = user.name
+      }
+    })
 
     const amount2 = amount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
 

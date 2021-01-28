@@ -7,13 +7,13 @@ class AddExpenseForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      author_id: '',
+      author_id: `${this.props.currentUser.id}`,
       category: 'General',
       description: '',
       amount: '',
       notes: '',
       friends_arr: [],
-      paid_by_id: '', 
+      paid_by_id: `${this.props.currentUser.id}`, 
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.selectedFriend = this.selectedFriend.bind(this);
