@@ -96,20 +96,20 @@ class AddExpenseForm extends React.Component {
             
             <div className='details-1-left'>
             
-            <img src={window.category_icon} alt="" className='category-icon-medium'/>
-            
+      
             <div className='categories-list'>
             <select className='categories-selector' onChange={this.update('category')} value={this.state.category}>
-            
             <option value="General">General</option>
             <option value="Utilities">Utilities</option>
             <option value="Food and Drink">Food and Drink</option>
             <option value="Rent">Rent</option>
             <option value="Transportation">Transportation</option>
             <option value="Entertainment">Entertainment</option>
-            
             </select>
             </div>
+
+            <img src={window.category_icon} alt="" className='category-icon-medium'/>
+            
             </div>
 
             <div className='details-1-right'>

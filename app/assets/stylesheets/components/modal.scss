@@ -18,31 +18,37 @@
   background-color: white;
   width:360px;
   height: 420px;
-  border-radius: 4px;
-  border: 1px solid $lighter2-grey;
+  border-radius: 5px;
+  border: 2px solid $lighter2-grey;
   display:flex;
   flex-direction: column;
+  // padding: 5px;
 }
 
 .addex-head {
   background-color: $light-green;
   color: $text-white;
   font-family: Lato;
-  font-size: 17;
+  font-size: 17px;
+  font-weight: 550;
   display: flex;
   justify-content: space-between;
   height: 40px;
   align-items: center;
-  padding: 3px;
+  padding: 6px;
+  
 }
 
 .addex-friends {
   display:flex;
   border-bottom: 1px solid lightgray;
   position: relative;
-  height: 46px;
+  height: 45px;
   font-family: Lato;
-  
+  margin-top: 10px;
+  font-size: 14px;
+  margin-left: 4px;
+  padding-top: 5px
 }
 
 .category-icon-medium {
@@ -50,9 +56,13 @@
 }
 
 .ae-friend-search {
-  background-color: $lighter2-grey;
+  background-color: $lightest-grey;
+  border: 0.5px solid $lighter2-grey;
+  margin-left: 3px;
+  width: 120px;
   // position: absolute;
   // top: 50px;
+  margin-right: 12px;
 }
 
 .dont-show-friends-list {
@@ -74,3 +84,19 @@
   // border: 1px solid blue;
 }
 
+.addex-details-1 {
+  border: 1px solid blue;
+  display:flex;
+  justify-content: space-between;
+}
+
+.details-1-left {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid red;
+}
+
+.details-2-right {
+  
+}
