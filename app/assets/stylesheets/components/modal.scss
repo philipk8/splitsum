@@ -148,7 +148,7 @@
 }
 
 .details-2-middle {
- margin-top: 3px; 
+ margin-top: 5px; 
  margin-bottom: 10px
 }
 
@@ -157,5 +157,28 @@
 }
 
 .addex-buttons {
-  
+  border-top: 0.5px solid $lighter2-grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  // align-items: flex-start
+  padding-top: 20px;
+  margin-top: 10px
+}
+
+.ae-btn-save {
+  background-color: $light-green;
+  color: $text-white;
+  margin-left: 3px;
+  border: 1px solid $lighter2-grey;
+  font-size: 14px;
+  height: 30px;
+  // height: 20px;
+  margin-right: 5px
+}
+ae-btn-cancel {
+  font-size: 14px;
+  border: 0.5px solid $lightest-grey;
+
+
 }
