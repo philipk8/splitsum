@@ -8,6 +8,15 @@ Splitsum is a clone of Splitwise, an app that makes it easy to split bills with 
 - Frontend: React, Redux, HTML5, CSS3, Javascript
 - Backend: Ruby on Rails, PostreSQL
 
+## Specific Features
+
+### Splitting expenses between multiple parties
+- Each expense added has a feature to add any number of friends to split the expense with and to select one friend who paid the expense.
+- The amount owed by each per is automatically shown to the user as the expense amount is typed.
+- To acheive the updating and calculations on the backend, I created a seperate expense_group table that saves each member related to the expense. The model then calculates the ledger owed at the user level using ActiveRecord queries, which is then updated on the frontend. 
+
+### Live search bar
+
 ## Features
 
 ### User Authentication
@@ -29,9 +38,6 @@ Splitsum is a clone of Splitwise, an app that makes it easy to split bills with 
   - Multiple friend selection feature to update expense tracking across all friends involved.
   - Ability to select which friend paid for the expense item.
   - Users are able to enter information about the expense like the amount, description, and notes.
-
-### All expenses view 
-- A summary page of all expenses related to the user. 
 
 ## Planned features
 - Ability to settle expenses between friends, updating all related oweings thereafter. 
