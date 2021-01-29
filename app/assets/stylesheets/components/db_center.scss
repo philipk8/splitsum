@@ -59,7 +59,7 @@
   height: 58px;
   align-items: center;
   font-family: Lato;
-  font-weight: 550;
+  
   font-size: 15px;
   // border: 1px solid grey;
   // box-shadow: 0px 20px 20px 5px lightgray
@@ -73,10 +73,9 @@
 }
 .ei-header-left span {
   margin-left: 6px;
-  font-size: 17px
+  font-size: 17px;
+  font-weight: 550;
 }
-
-
 
 .ei-header-right {
   display: flex;
@@ -107,11 +106,13 @@
 
 .who-pl-amt {
   color: black;
-  font-size: 15px
+  font-size: 15px;
+  font-weight: 550;
 }
 .who-pl-amt2 {
   color: $light-green;
-  font-size: 15px
+  font-size: 15px;
+  font-weight: 550;
 }
 #money::before {
   content:"$";
@@ -128,7 +129,7 @@
 }
 
 .category-icon-medium {
-  height: 65px
+  height: 70px
 }
 
 .ei-middle-content {
