@@ -115,13 +115,17 @@ class AddExpenseForm extends React.Component {
             <div className='details-1-right'>
 
             <div className='addex-desc-amt'>
-                <span>Enter a description</span>
+                <span>Enter a description:</span>
                 <input type="text"
                 value={this.state.description}
                 onChange={this.update('description')}
                 className="addex-desc"
                 />
-                <span>$</span>
+                <br/>
+                <br/>
+                <span>Amount:</span>
+                <br/>
+                {/* <span>$</span> */}
                 <input type="text"
                 value={this.state.amount}
                 onChange={this.update('amount')}
@@ -134,7 +138,7 @@ class AddExpenseForm extends React.Component {
 
           <div className='addex-details-2'>
             <div className='details-2-top'>
-            Paid by 
+            Paid by
             <div className='addex-paidby'>
             <select className='paidby-selector' onChange={this.update('paid_by_id')} value={this.state.paid_by_id}>
               <option value={this.props.currentUser.id}>you</option>
@@ -157,6 +161,7 @@ class AddExpenseForm extends React.Component {
             </div>
             <div className='details-2-bottom'>
               Notes:
+              <br/>
               <textarea
                 value={this.state.notes}
                 onChange={this.update('notes')}
