@@ -59,7 +59,7 @@
   height: 58px;
   align-items: center;
   font-family: Lato;
-  
+  border-top: 1.5px solid $lighter2-grey;
   font-size: 15px;
   // border: 1px solid grey;
   // box-shadow: 0px 20px 20px 5px lightgray
@@ -70,6 +70,7 @@
   align-items: center;
   justify-content: flex-start;
   margin-left: 5px;
+  
 }
 .ei-header-left span {
   margin-left: 6px;
@@ -166,7 +167,40 @@
   height: 40px;
 }
 
-// expense index end 
+.ei-bottom {
+  display: flex;
+  background-color: $lightest-grey;
+  height: 110px;
+  padding: 7px;
+  font-size: 14px;
+  border-bottom: 1.5px solid $lighter2-grey
+}
+
+.ei-b-left {
+  width: 300px
+}
+
+.ei-you-paid-1 {
+  margin-bottom: 11px;
+}
+
+.ei-you-paid-2 {
+  margin-bottom: 5px;
+}
+
+.font-bold-2 {
+  font-weight: bold;
+}
+
+
+
+// .ei-user-icon {
+//   width: 40px
+// }
+
+
+
+// expense index end *********************************
 .user-summary-1 {
   display: flex;
   justify-content: space-around;

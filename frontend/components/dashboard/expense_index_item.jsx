@@ -69,12 +69,12 @@ class ExpenseIndexItem extends React.Component {
         }
     })
 
-    payee1 = payee1 + ' owes'
+    payee1 = payee1 + ' owes '
 
     if (payee2 == '') {
       payee2 == ''
     } else {
-      payee2 = payee2 + ' owes'
+      payee2 = payee2 + ' owes '
     }
 
     eachShare = eachShare.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
@@ -154,54 +154,32 @@ class ExpenseIndexItem extends React.Component {
       <div className='ei-bottom'>
           <div className='ei-b-left'>
             <ul>
-              <li>
+              <li className='ei-you-paid-1'>
                 {/* <img src={window.user_icon} alt="" className='ei-user-icon'/> */}
-              {userPaid} paid {amount2} and owes {eachShare}
+              <span id='font-bold'>{userPaid}</span> paid <span id='money' className='font-bold-2'>{amount2}</span> and owes <span id='money' className='font-bold-2'>{eachShare}</span>
               </li>
-              {/* {
-              splitArr.forEach( (payee_id) => {
-                debugger  
-                if (payee_id !== paid_by_id) {
-                  debugger
-                  <li>{this.props.usersIndexObj[payee_id].name}</li>
-                }
-              })
-              } */}
-              {/* {
-              splitArr.forEach( (payee_id) => {
-                debugger
-                if (payee_id == paid_by_id) {
-                  debugger
-                  } else
-                    {
-                    this.props.usersIndex.forEach( user => {
-                    if (user.id == payee_id) {
-                      debugger
-                    // return <li>{user.name}</li>
-                    let user1 = user.name
-                        }
-                    })
-                    }  
-                
-              })
-              } */}
-              <li>
-                {/* <img src={window.user_icon} alt="" className='ei-user-icon'/> */}
-                {payee1} {amount4}
+              <li className='ei-you-paid-2'>
+                {/* <img src={window.friend_icon} alt="" className='ei-user-icon'/> */}
+                <span id='font-bold'>{payee1}</span> 
+                <span id='money' className='font-bold-2'>{amount4}</span>
               </li>
               <li>
-                {/* <img src={window.user_icon} alt="" className='ei-user-icon'/> */}
-                {payee2} {amount5}
+                {/* <img src={window.friend_icon} alt="" className='ei-user-icon'/> */}
+                 <span id='font-bold'>{payee2}</span> 
+                <span className='font-bold-2'>{amount5}</span>
                 
               </li>
             </ul>
           </div>
           <div className='ei-b-right'>
               <div className='ei-b-right-category'>
-                  Category: {category}
+                <div className='ei-you-paid-1'>
+                  <span id='font-bold' >Category: </span>
+                  {category}
+                </div>
               </div>
               <div className='ei-b-right-notes'>
-                  <span>Notes:</span> 
+                  <span id='font-bold' className='.ei-you-paid-2'>Notes:</span> 
                   <br/>
                   <span>{notes}</span>
               </div>
