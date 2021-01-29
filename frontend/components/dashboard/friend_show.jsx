@@ -25,7 +25,7 @@ class FriendShow extends React.Component {
   }
 
   render() {
-    debugger
+    // debugger
     // const friendName = this.props.friend.name;
     return (
       <div className='db-main'>
@@ -54,7 +54,8 @@ class FriendShow extends React.Component {
               {/* <span className='db-header-wrd'>{this.props.friend.name}</span> */}
               
               {/* <button className='db-add-expense-btn'>Add an expense</button> */}
-              <span className='db-header-wrd'>{this.props.friend.name}</span>
+              {/* <span className='db-header-wrd'>{this.props.friend.name}</span> */}
+              <span className='db-header-wrd'>Friend Expenses</span>
               {this.props.addExpenseForm}
               {/* {this.props.otherForm} */}
             </div>
@@ -82,7 +83,7 @@ class FriendShow extends React.Component {
             <button className='remove-friend-btn' onClick={this.deleteFriend}>
               Remove this friend
             </button>
-            <br/>
+            {/* <br/>
             <p className='right-your-balance'> 
             Your Balance
             </p>
@@ -90,7 +91,7 @@ class FriendShow extends React.Component {
              <p className='right-balance-amount'> 
             friend owes you $10
             </p>
-            <br/>
+            <br/> */}
           </section>
 
         </section>

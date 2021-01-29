@@ -14,12 +14,13 @@ class ExpenseIndexItem extends React.Component {
 //     this.props.fetchUsers();
 //   }
 
+
   render() {
 
-    const { description, author_id, amount, paid_by_id, split,category, notes } = this.props.expense;
+    const { description, author_id, amount, paid_by_id, split,category, notes, id } = this.props.expense;
 
     // const userPaid2 = this.props.usersIndexObj[author_id].name
-debugger
+// debugger
     let userPaid = ''
     let userLent = ''
     this.props.usersIndex.forEach( user => {
@@ -29,7 +30,7 @@ debugger
         userPaid = 'you';
       }
     })
-  debugger
+  // debugger
 
     let authorName = ''
     this.props.usersIndex.forEach( user => {
@@ -88,7 +89,7 @@ debugger
      amount5 = payee2Amt.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
     }
 
-debugger
+// debugger
     // const userName = this.props.usersIndexObj[94].name
 
     // let lentWho = ''
@@ -129,6 +130,7 @@ debugger
           <span className='who-pl-amt2' id='money'>{amount3}
           </span>
         </div>
+
         
       </div>
       

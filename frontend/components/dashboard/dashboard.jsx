@@ -28,6 +28,8 @@ class Dashboard extends React.Component {
     const total_balance1 = total_balance.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
     const you_owe1 = you_owe.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
     const you_are_owed1 = you_are_owed.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+
+    const color_flag = total_balance > 0 ? 'green' : 'orange'
   //  debugger 
 
     return (
@@ -63,11 +65,11 @@ class Dashboard extends React.Component {
             <div className='user-summary-1'>
               <div className='us-1-left'>
                 <span>total balance</span>
-                <p id='money'>{total_balance1}</p>
+                <p id='money' className={color_flag}>{total_balance1}</p>
               </div>
               <div className='us-1-middle'>
                 <span>you owe</span>
-                <p id='money'>{you_owe1}</p>
+                <p id='money' >{you_owe1}</p>
               </div>
               <div className='us-1-right'>
                 <span>you are owed</span>

@@ -46,7 +46,7 @@ ActiveRecord::Base.transaction do
   fs15 = Friend.create!(user_id: u4.id, friend_id: u11.id)
   fs16 = Friend.create!(user_id: u4.id, friend_id: u10.id)
 
-  e1 = ExpenseDetail.create!(author_id: u1.id, category: 'general', description: 'breakfast', amount: 60, notes: 'nice breakfast')
+  e1 = ExpenseDetail.create!(author_id: u1.id, category: 'general', description: 'breakfast', amount: 50, notes: 'nice breakfast')
   eg1 = ExpenseGroup.create!(expense_id: e1.id, split_with_id: u1.id, paid_by_id: u1.id )
   eg2 = ExpenseGroup.create!(expense_id: e1.id, split_with_id: u2.id, paid_by_id: u1.id )
   eg3 = ExpenseGroup.create!(expense_id: e1.id, split_with_id: u3.id, paid_by_id: u1.id )
@@ -55,28 +55,27 @@ ActiveRecord::Base.transaction do
   eg4 = ExpenseGroup.create!(expense_id: e2.id, split_with_id: u1.id, paid_by_id: u1.id )
   eg5 = ExpenseGroup.create!(expense_id: e2.id, split_with_id: u2.id, paid_by_id: u1.id )
   
-  e3 = ExpenseDetail.create!(author_id: u1.id, category: 'general', description: 'dinner', amount: 60, notes: 'nice dinner')
+  e3 = ExpenseDetail.create!(author_id: u1.id, category: 'general', description: 'dinner', amount: 70, notes: 'nice dinner')
   eg6 = ExpenseGroup.create!(expense_id: e3.id, split_with_id: u1.id, paid_by_id: u1.id )
   eg7 = ExpenseGroup.create!(expense_id: e3.id, split_with_id: u3.id, paid_by_id: u1.id )
   
-  e4 = ExpenseDetail.create!(author_id: u1.id, category: 'general', description: 'teatime', amount: 60, notes: 'nice teatime')
+  e4 = ExpenseDetail.create!(author_id: u1.id, category: 'general', description: 'teatime', amount: 80, notes: 'nice teatime')
   eg8 = ExpenseGroup.create!(expense_id: e4.id, split_with_id: u1.id, paid_by_id: u2.id )
   eg9 = ExpenseGroup.create!(expense_id: e4.id, split_with_id: u2.id, paid_by_id: u2.id )
   
-  e5 = ExpenseDetail.create!(author_id: u2.id, category: 'general', description: 'supper', amount: 60, notes: 'nice supper')
+  e5 = ExpenseDetail.create!(author_id: u2.id, category: 'general', description: 'supper', amount: 90, notes: 'nice supper')
   eg10 = ExpenseGroup.create!(expense_id: e5.id, split_with_id: u2.id, paid_by_id: u2.id )
   eg11 = ExpenseGroup.create!(expense_id: e5.id, split_with_id: u1.id, paid_by_id: u2.id )
   eg12 = ExpenseGroup.create!(expense_id: e5.id, split_with_id: u3.id, paid_by_id: u2.id )
   
-  e6 = ExpenseDetail.create!(author_id: u2.id, category: 'general', description: 'brunch', amount: 60, notes: 'nice brunch')
+  e6 = ExpenseDetail.create!(author_id: u2.id, category: 'general', description: 'brunch', amount: 100, notes: 'nice brunch')
   eg13 = ExpenseGroup.create!(expense_id: e6.id, split_with_id: u2.id, paid_by_id: u2.id )
   eg14 = ExpenseGroup.create!(expense_id: e6.id, split_with_id: u1.id, paid_by_id: u2.id )
   
-  e7 = ExpenseDetail.create!(author_id: u3.id, category: 'general', description: 'snack', amount: 60, notes: 'nice snack')
+  e7 = ExpenseDetail.create!(author_id: u3.id, category: 'general', description: 'snack', amount: 110, notes: 'nice snack')
   eg16 = ExpenseGroup.create!(expense_id: e7.id, split_with_id: u3.id, paid_by_id: u3.id )
   eg17 = ExpenseGroup.create!(expense_id: e7.id, split_with_id: u1.id, paid_by_id: u3.id )
+  
 
-  
-  
   
 end

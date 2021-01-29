@@ -44,6 +44,7 @@ class FriendExpensesIndex extends React.Component {
     // debugger
 
     return(
+      
     <ul>
       {
         expensesArr.map((expense) => (
