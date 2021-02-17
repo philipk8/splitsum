@@ -5,13 +5,13 @@ Splitsum is a clone of Splitwise, an app that makes it easy to split bills with 
 [Live Link](https://splitsum.herokuapp.com/#/)
 
 ### Splash Page:
-![landing page](http://github.com/philipk8/stock-metrics/blob/main/app/assets/readme_images/splitsum-landing.png?raw=true)
+![landing page](http://github.com/philipk8/splitsum/blob/main/app/assets/readme_images/splitsum-landing.png?raw=true)
 
 ### All Expenses Page:
-![index page](http://github.com/philipk8/stock-metrics/blob/main/app/assets/readme_images/splitsum-index.png?raw=true)
+![index page](http://github.com/philipk8/splitsum/blob/main/app/assets/readme_images/splitsum-index.png?raw=true)
 
 ### Add Expense Item Modal:
-![add expense modal](http://github.com/philipk8/stock-metrics/blob/main/app/assets/readme_images/splitsum-addexp.png?raw=true)
+![add expense modal](http://github.com/philipk8/splitsum/blob/main/app/assets/readme_images/splitsum-addexp.png?raw=true)
 
 ## Technologies
 - Frontend: React, Redux, HTML5, CSS3, Javascript
