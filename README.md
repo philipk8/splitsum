@@ -4,18 +4,32 @@ Splitsum is a clone of Splitwise, an app that makes it easy to split bills with 
 
 [Live Link](https://splitsum.herokuapp.com/#/)
 
+### Splash Page:
+![landing page](http://github.com/philipk8/stock-metrics/blob/main/app/assets/readme_images/splitsum-landing.png?raw=true)
+
+### All Expenses Page:
+![index page](http://github.com/philipk8/stock-metrics/blob/main/app/assets/readme_images/splitsum-index.png?raw=true)
+
+### Add Expense Item Modal:
+![add expense modal](http://github.com/philipk8/stock-metrics/blob/main/app/assets/readme_images/splitsum-addexp.png?raw=true)
+
 ## Technologies
 - Frontend: React, Redux, HTML5, CSS3, Javascript
 - Backend: Ruby on Rails, PostreSQL
 
-## Specific Features
+## Callout Features
+
+### Add Expense Modal
+- Modal pop-up for adding expenses.
+- Live search bar for friends to include in expense item. 
+    - Live updating of friends list as user types into search field. 
+    - Ability to click on user searched to add to friends added list.
+- Dropdown menu for who paid. Selection of User or any added friends. Backend calculates oweings and total amounts are updated.
+- The amount owed by each friend is automatically shown to the user as the expense amount is typed.
 
 ### Splitting expenses between multiple parties
 - Each expense added has a feature to add any number of friends to split the expense with and to select one friend who paid the expense.
-- The amount owed by each per is automatically shown to the user as the expense amount is typed.
-- To acheive the updating and calculations on the backend, I created a seperate expense_group table that saves each member related to the expense. The model then calculates the ledger owed at the user level using ActiveRecord queries, which is then updated on the frontend. 
-
-### Live search bar
+- To acheive the updating and calculations on the backend, I created a seperate expense_group table that saves each member related to the expense. The model then calculates the ledger owed at the user level using ActiveRecord queries, which is then updated on the frontend.
 
 ## Features
 
@@ -34,16 +48,8 @@ Splitsum is a clone of Splitwise, an app that makes it easy to split bills with 
 
 ### Expenses
 - Ability to add expenses with a pop-up form. 
-  - Search feature in selection of friends. Friend results appear as you type in search bar. 
-  - Multiple friend selection feature to update expense tracking across all friends involved.
-  - Ability to select which friend paid for the expense item.
-  - Users are able to enter information about the expense like the amount, description, and notes.
+  - Users are able to enter information about the expense: add friends, who paid, amount, description, and notes.
 
 ## Planned features
 - Ability to settle expenses between friends, updating all related oweings thereafter. 
 - Ability to change the split proportion between friends. The current default is an equal split. 
-  
-
-
-
-
